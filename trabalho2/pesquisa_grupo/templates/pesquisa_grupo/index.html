@@ -1,0 +1,21 @@
+
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Grupo de Pesquisa</h1>
+  <p>Este é o grupo de pesquisa da universidade, dedicado a estudos e inovações em diversas áreas.</p>
+  
+  <h2>Integrantes</h2>
+  <ul>
+    {% for integrante in integrantes %}
+      <li>
+        <a href="{% url 'detalhes_integrante' integrante.id %}">
+          {% if integrante.foto %}
+            <img src="{{ integrante.foto.url }}" alt="Foto de {{ integrante.nome }}" />
+          {% endif %}
+          {{ integrante.nome }} - {{ integrante.get_tipo_display }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
