@@ -1,6 +1,14 @@
 from django.db import models
+from django.core.validators import MaxValueValidator
+from django.utils import timezone
 
-# Create your models here.
+# Função para obter o ano atual
+def current_year():
+    return timezone.now().year
+
+# Validador para garantir que o ano é menor ou igual ao ano atual
+def max_value_current_year(value):
+    return MaxValueValidator(current_year())(value)
 
 class Integrante(models.Model):
     TIPOS = [
@@ -19,7 +27,7 @@ class Integrante(models.Model):
 
 class Publicacao(models.Model):
     titulo = models.CharField(max_length=200)
-    ano_publicacao = models.IntegerField()
+    ano_publicacao = models.PositiveIntegerField(validators=[max_value_current_year])
     veiculo_publicacao = models.CharField(max_length=200)
     autores = models.ManyToManyField(Integrante)
 

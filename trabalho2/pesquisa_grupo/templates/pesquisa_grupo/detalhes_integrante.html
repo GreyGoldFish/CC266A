@@ -1,19 +1,20 @@
-
 {% extends 'base_generic.html' %}
 
 {% block content %}
   <h1>{{ integrante.nome }}</h1>
   <p>Tipo de associação: {{ integrante.get_tipo_display }}</p>
   {% if integrante.foto %}
-    <img src="{{ integrante.foto.url }}" alt="Foto de {{ integrante.nome }}" />
+    <div class="detalhes-integrante">
+      <img src="{{ integrante.foto.url }}" alt="Foto de {{ integrante.nome }}" />
+    </div>
   {% endif %}
 
   <h2>Publicações</h2>
   <ul>
     {% for publicacao in publicacoes %}
-      <li>{{ publicacao.titulo }} - {{ publicacao.ano_publicacao }}</li>
+      <li class="publicacao-item">{{ publicacao.titulo }} - {{ publicacao.ano_publicacao }}</li>
     {% endfor %}
   </ul>
 
-  <a href="{% url 'index' %}">Voltar para a lista de integrantes</a>
+  <a class="details-link" href="{% url 'index' %}">Voltar para a lista de integrantes</a>
 {% endblock %}

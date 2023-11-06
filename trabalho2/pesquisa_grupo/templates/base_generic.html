@@ -3,30 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Título da Página{% endblock %}</title>
+    <title>{% block title %}Grupo de Pesquisa{% endblock %}</title>
     {% load static %}
     {% block extrahead %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
         <nav>
-            <!-- Aqui vai a barra de navegação -->
         </nav>
     </header>
 
     <main>
         {% block content %}
-        <!-- O conteúdo das páginas filhas entra aqui -->
         {% endblock %}
     </main>
 
     <footer>
-        <!-- Aqui vai o rodapé do site -->
+        <p>&copy; 2023 Grupo de Pesquisa</p>
     </footer>
-
-    {% block extrabody %}
-    <!-- Scripts adicionais podem ser colocados aqui -->
-    {% endblock %}
 </body>
 </html>
