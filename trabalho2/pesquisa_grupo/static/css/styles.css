@@ -1,3 +1,4 @@
+/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -16,20 +17,32 @@ main {
     padding: 20px;
 }
 
-.list-item {
+ul li {
+    list-style-type: none;
+}
+
+/* Estilos para a lista de integrantes e itens de publicação */
+.list-item, .publicacao-item {
     border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
     background-color: white;
-    list-style-type: none;
 }
 
-.list-item img {
-    max-width: 100px;
+.list-item img, .detalhes-integrante img {
+    display: block;
+    max-width: 100px; /* Ajustado para corresponder ao tamanho da imagem na lista */
     height: auto;
     border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
+/* Estilos para detalhes do integrante */
+.detalhes-integrante img {
+    max-width: 200px; /* Tamanho da imagem na página de detalhes */
+}
+
+/* Estilos para links */
 .list-item a, .details-link {
     text-decoration: none;
     color: #007bff;
@@ -37,12 +50,4 @@ main {
 
 .list-item a:hover, .details-link:hover {
     text-decoration: underline;
-}
-
-.detalhes-integrante img {
-    max-width: 200px;
-}
-
-.publicacao-item {
-    margin-bottom: 5px;
 }
