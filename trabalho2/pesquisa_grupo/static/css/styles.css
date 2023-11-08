@@ -1,4 +1,3 @@
-/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -21,7 +20,6 @@ ul li {
     list-style-type: none;
 }
 
-/* Estilos para a lista de integrantes e itens de publicação */
 .list-item, .publicacao-item {
     border: 1px solid #ddd;
     padding: 10px;
@@ -31,18 +29,16 @@ ul li {
 
 .list-item img, .detalhes-integrante img {
     display: block;
-    max-width: 100px; /* Ajustado para corresponder ao tamanho da imagem na lista */
+    max-width: 100px;
     height: auto;
     border: 1px solid #ccc;
     margin-bottom: 10px;
 }
 
-/* Estilos para detalhes do integrante */
 .detalhes-integrante img {
-    max-width: 200px; /* Tamanho da imagem na página de detalhes */
+    max-width: 200px;
 }
 
-/* Estilos para links */
 .list-item a, .details-link {
     text-decoration: none;
     color: #007bff;

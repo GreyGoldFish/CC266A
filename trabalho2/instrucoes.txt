@@ -1,0 +1,12 @@
+Execute o servidor:
+
+/trabalho2> python manage.py runserver
+
+Fotos são armazenadas em /media.
+
+Acesso de administrador:
+
+Usuário: admin
+Senha: admin
+
+Dependências podem ser encontradas em /requirements.txt
