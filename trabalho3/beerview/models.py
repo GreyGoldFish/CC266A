@@ -29,27 +29,6 @@ class EstiloCerveja(models.Model):
     def __str__(self):
         return f"{self.nome} ({self.tipo.nome})"
 
-class Cerveja(models.Model):
-    nome = models.CharField(max_length=200)
-    cervejaria = models.ForeignKey(Cervejaria, on_delete=models.CASCADE, related_name="cervejas")
-    estilo = models.ForeignKey(EstiloCerveja, on_delete=models.SET_NULL, null=True, related_name="cervejas")
-    abv = models.DecimalField(max_digits=4, decimal_places=2, help_text=_("Alcohol By Volume"))
-    ibu = models.PositiveIntegerField(_("IBU"), null=True, blank=True, help_text=_("International Bitterness Units"))
-    srm = models.PositiveIntegerField(_("SRM"), null=True, blank=True, help_text=_("Standard Reference Method - color"))
-    descricao = models.TextField(blank=True)
-
-    def __str__(self):
-        return f"{self.nome} - {self.estilo.nome}"
-
-class Avaliacao(models.Model):
-    cerveja = models.ForeignKey(Cerveja, on_delete=models.CASCADE, related_name="avaliacoes")
-    usuario = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True)
-    nota = models.DecimalField(max_digits=3, decimal_places=2, validators=[MinValueValidator(Decimal('0.00')), MaxValueValidator(Decimal('5.00'))])
-    comentario = models.TextField()
-
-    def __str__(self):
-        return f"{self.usuario.username} - {self.nota} - {self.cerveja.nome}"
-
 class Endereco(models.Model):
     linha1 = models.CharField(max_length=255, verbose_name="Endereço Linha 1")
     linha2 = models.CharField(max_length=255, blank=True, null=True, verbose_name="Endereço Linha 2")
@@ -74,4 +53,26 @@ class Cervejaria(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Cerveja(models.Model):
+    nome = models.CharField(max_length=200)
+    cervejaria = models.ForeignKey(Cervejaria, on_delete=models.CASCADE, related_name="cervejas")
+    estilo = models.ForeignKey(EstiloCerveja, on_delete=models.SET_NULL, null=True, related_name="cervejas")
+    abv = models.DecimalField(max_digits=4, decimal_places=2, help_text=_("Alcohol By Volume"))
+    ibu = models.PositiveIntegerField(_("IBU"), null=True, blank=True, help_text=_("International Bitterness Units"))
+    srm = models.PositiveIntegerField(_("SRM"), null=True, blank=True, help_text=_("Standard Reference Method - color"))
+    descricao = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.nome} - {self.estilo.nome}"
+
+class Avaliacao(models.Model):
+    cerveja = models.ForeignKey(Cerveja, on_delete=models.CASCADE, related_name="avaliacoes")
+    usuario = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True)
+    nota = models.DecimalField(max_digits=3, decimal_places=2, validators=[MinValueValidator(Decimal('0.00')), MaxValueValidator(Decimal('5.00'))])
+    comentario = models.TextField()
+
+    def __str__(self):
+        return f"{self.usuario.username} - {self.nota} - {self.cerveja.nome}"
+
     

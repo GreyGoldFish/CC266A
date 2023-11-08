@@ -6,7 +6,7 @@ class AvaliacaoInline(admin.TabularInline):
     extra = 1  # Quantas linhas para adicionar avaliações serão mostradas
 
 class CervejaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'cervejaria', 'estilo', 'vol')  # Campos que aparecem na listagem
+    list_display = ('nome', 'cervejaria', 'estilo', 'abv')  # Campos que aparecem na listagem
     list_filter = ('estilo', 'cervejaria')  # Filtros disponíveis na barra lateral
     search_fields = ('nome', 'cervejaria_nome')  # Campos pesquisáveis
     inlines = [AvaliacaoInline]
