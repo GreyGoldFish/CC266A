@@ -14,7 +14,7 @@ class TipoEstilo(models.Model):
         return self.nome
 
 class EstiloCerveja(models.Model):
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name="estilos")
+    tipo = models.ForeignKey(TipoEstilo, on_delete=models.CASCADE, related_name="estilos")
     nome = models.CharField(max_length=200, unique=True)
     descricao = models.TextField()
     ibu_min = models.PositiveIntegerField(null=True, blank=True)
@@ -27,7 +27,7 @@ class EstiloCerveja(models.Model):
     historia = models.TextField(blank=True)
 
     def __str__(self):
-        return f"{self.nome} ({self.categoria.nome})"
+        return f"{self.nome} ({self.tipo.nome})"
 
 class Cerveja(models.Model):
     nome = models.CharField(max_length=200)

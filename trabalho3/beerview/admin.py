@@ -8,13 +8,13 @@ class AvaliacaoInline(admin.TabularInline):
 class CervejaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'cervejaria', 'estilo', 'vol')  # Campos que aparecem na listagem
     list_filter = ('estilo', 'cervejaria')  # Filtros disponíveis na barra lateral
-    search_fields = ('nome', 'cervejaria__nome')  # Campos pesquisáveis
+    search_fields = ('nome', 'cervejaria_nome')  # Campos pesquisáveis
     inlines = [AvaliacaoInline]
 
 class AvaliacaoAdmin(admin.ModelAdmin):
     list_display = ('cerveja', 'usuario', 'nota', 'comentario')
     list_filter = ('nota', 'usuario')
-    search_fields = ('cerveja__nome', 'usuario__username')
+    search_fields = ('cerveja_nome', 'usuario_username')
 
 admin.site.register(TipoEstilo)
 admin.site.register(EstiloCerveja)
