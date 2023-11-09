@@ -1,23 +1,23 @@
 from django.contrib import admin
-from .models import EstiloCerveja, Cerveja, Avaliacao, Endereco, Cervejaria
+from .models import BeerStyle, Beer, Review, Address, Brewery
 
-class AvaliacaoInline(admin.TabularInline):
-    model = Avaliacao
+class ReviewInline(admin.TabularInline):
+    model = Review
     extra = 1  # Quantas linhas para adicionar avaliações serão mostradas
 
-class CervejaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'cervejaria', 'estilo', 'abv')  # Campos que aparecem na listagem
-    list_filter = ('estilo', 'cervejaria')  # Filtros disponíveis na barra lateral
-    search_fields = ('nome', 'cervejaria_nome')  # Campos pesquisáveis
-    inlines = [AvaliacaoInline]
+class BeerAdmin(admin.ModelAdmin):
+    list_display = ('name', 'brewery', 'style', 'abv')  # Campos que aparecem na listagem
+    list_filter = ('style', 'brewery')  # Filtros disponíveis na barra lateral
+    search_fields = ('name', 'brewery_name')  # Campos pesquisáveis
+    inlines = [ReviewInline]
 
-class AvaliacaoAdmin(admin.ModelAdmin):
-    list_display = ('cerveja', 'usuario', 'nota', 'comentario')
-    list_filter = ('nota', 'usuario')
-    search_fields = ('cerveja_nome', 'usuario_username')
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('beer', 'user', 'rating', 'comment')
+    list_filter = ('rating', 'user')
+    search_fields = ('beer_name', 'user_name')
 
-admin.site.register(EstiloCerveja)
-admin.site.register(Cerveja, CervejaAdmin)
-admin.site.register(Avaliacao, AvaliacaoAdmin)
-admin.site.register(Endereco)
-admin.site.register(Cervejaria)
+admin.site.register(BeerStyle)
+admin.site.register(Beer, BeerAdmin)
+admin.site.register(Review, ReviewAdmin)
+admin.site.register(Address)
+admin.site.register(Brewery)
