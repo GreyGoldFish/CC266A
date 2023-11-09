@@ -1,0 +1,7 @@
+<h2>Add Review for {{ beer.name }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<a href="{% url 'beer_details' beer.id %}">Back to Beer Details</a>

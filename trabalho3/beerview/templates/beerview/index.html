@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beer List</title>
+</head>
+<body>
+    <h1>Available Beers</h1>
+    <form method="get" action="{% url 'search_beers' %}">
+        <input type="text" name="q" placeholder="Search beers...">
+        <button type="submit">Search</button>
+    </form>
+    {% if beers %}
+        <ul>
+        {% for beer in beers %}
+            <li><a href="{% url 'beer_details' beer.id %}">{{ beer.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No beers are available.</p>
+    {% endif %}
+    <a href="{% url 'add_beer' %}">Add a New Beer</a>
+</body>
+</html>

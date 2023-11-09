@@ -1,0 +1,18 @@
+<h2>Reviews for {{ beer.name }}</h2>
+<ul>
+    {% for review in reviews %}
+    <li>{{ review.user.username }}: {{ review.rating }} - {{ review.comment }}</li>
+    <form method="post" action="{% url 'delete_review' review.id %}">
+        {% csrf_token %}
+        <button type="submit">Delete Review</button>
+    </form>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_review' beer.id %}">Add Review</a>
+
+<form method="post" action="{% url 'delete_beer' beer.id %}">
+    {% csrf_token %}
+    <button type="submit">Delete Beer</button>
+</form>
+<a href="{% url 'update_beer' beer.id %}">Edit Beer</a>
+<a href="{% url 'index' %}">Back to Beer List</a>

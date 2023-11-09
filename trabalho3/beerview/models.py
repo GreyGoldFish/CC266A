@@ -136,7 +136,8 @@ class Beer(models.Model):
         related_name="beers"
     )
     abv = models.DecimalField(
-        _("ABV"), max_digits=3,
+        _("ABV"),
+        max_digits=3,
         decimal_places=1,
         help_text=_("Alcohol By Volume"),
         validators=[MinValueValidator(Decimal('0.00'))]
