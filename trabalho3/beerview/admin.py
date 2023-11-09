@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TipoEstilo, EstiloCerveja, Cerveja, Avaliacao, Endereco, Cervejaria
+from .models import EstiloCerveja, Cerveja, Avaliacao, Endereco, Cervejaria
 
 class AvaliacaoInline(admin.TabularInline):
     model = Avaliacao
@@ -16,7 +16,6 @@ class AvaliacaoAdmin(admin.ModelAdmin):
     list_filter = ('nota', 'usuario')
     search_fields = ('cerveja_nome', 'usuario_username')
 
-admin.site.register(TipoEstilo)
 admin.site.register(EstiloCerveja)
 admin.site.register(Cerveja, CervejaAdmin)
 admin.site.register(Avaliacao, AvaliacaoAdmin)

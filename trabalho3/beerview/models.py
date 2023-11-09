@@ -5,18 +5,25 @@ from django.utils.translation import gettext_lazy as _
 from django_countries.fields import CountryField
 from decimal import Decimal
 
-
-class TipoEstilo(models.Model):
-    nome = models.CharField(max_length=200, unique=True)
-    descricao = models.TextField(blank=True)
-
-    def __str__(self):
-        return self.nome
-
 class EstiloCerveja(models.Model):
-    tipo = models.ForeignKey(TipoEstilo, on_delete=models.CASCADE, related_name="estilos")
+    FAMILIAS = [
+        ('BO', 'Bock'),
+        ('BA', 'Brown Ale'),
+        ('DA', 'Dark Ale'),
+        ('IP', 'Indian Pale Ale'),
+        ('PA', 'Pale Ale'),
+        ('PL', 'Pale Lager'),
+        ('PO', 'Porter'),
+        ('ES', 'Especial'),
+        ('ST', 'Stout'),
+        ('SA', 'Strong Ale'),
+        ('WH', 'Wheat Beer'),
+        ('WI', 'Wild Beer'),
+    ]
+
     nome = models.CharField(max_length=200, unique=True)
     descricao = models.TextField()
+    familia = models.CharField(max_length=2, choices=FAMILIAS)
     ibu_min = models.PositiveIntegerField(null=True, blank=True, help_text=_("Minimum International Bitterness Units"))
     ibu_max = models.PositiveIntegerField(null=True, blank=True, help_text=_("Maximum International Bitterness Units"))
     srm_min = models.PositiveIntegerField(null=True, blank=True, help_text=_("Minimum Standard Reference Method - color"))
