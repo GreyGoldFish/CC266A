@@ -17,21 +17,19 @@ def index(request):
 def beer_details(request, beer_id):
     beer = get_object_or_404(Beer, pk=beer_id)
     reviews = beer.reviews.all()
-    return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews})
 
-def add_review(request, beer_id):
-    beer = get_object_or_404(Beer, id=beer_id)
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.beer = beer
-            review.user = request.user
+            review.user = request.user  # Assuming the user is authenticated
             review.save()
             return redirect('beer_details', beer_id=beer.id)
     else:
         form = ReviewForm()
-    return render(request, 'beerview/add_review.html', {'form': form, 'beer': beer})
+
+    return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews, 'form': form})
 
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)

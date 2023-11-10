@@ -8,11 +8,19 @@
     </form>
     {% endfor %}
 </ul>
-<a href="{% url 'add_review' beer.id %}">Add Review</a>
+
+<!-- Review Form -->
+<h3>Add a Review</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Review</button>
+</form>
 
 <form method="post" action="{% url 'delete_beer' beer.id %}">
     {% csrf_token %}
     <button type="submit">Delete Beer</button>
 </form>
+
 <a href="{% url 'update_beer' beer.id %}">Edit Beer</a>
 <a href="{% url 'index' %}">Back to Beer List</a>
