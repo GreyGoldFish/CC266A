@@ -53,7 +53,7 @@ def add_beer(request):
             return redirect('index')
     else:
         form = BeerForm()
-    return render(request, 'beerview/add_beer.html', {'form': form})
+    return render(request, 'beerview/beer_form.html', {'form': form})
 
 def update_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
@@ -64,7 +64,7 @@ def update_beer(request, beer_id):
             return redirect('beer_details', beer_id=beer.id)
     else:
         form = BeerForm(instance=beer)
-    return render(request, 'beerview/update_beer.html', {'form': form, 'beer': beer})
+    return render(request, 'beerview/beer_form.html', {'form': form, 'beer': beer})
 
 def delete_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)

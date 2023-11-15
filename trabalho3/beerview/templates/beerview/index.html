@@ -1,23 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Beer List</title>
-</head>
-<body>
-    <h1>Available Beers</h1>
-    <form method="get" action="{% url 'search_beers' %}">
-        <input type="text" name="q" placeholder="Search beers...">
-        <button type="submit">Search</button>
-    </form>
+{% extends 'base_generic.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="py-5">
+    <h1 class="text-center">Available Beers</h1>
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+            <form method="get" action="{% url 'search_beers' %}" class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search beers...">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
     {% if beers %}
-        <ul>
+        <div class="list-group">
         {% for beer in beers %}
-            <li><a href="{% url 'beer_details' beer.id %}">{{ beer.name }}</a></li>
+            <a href="{% url 'beer_details' beer.id %}" class="list-group-item list-group-item-action">{{ beer.name }}</a>
         {% endfor %}
-        </ul>
+        </div>
     {% else %}
-        <p>No beers are available.</p>
+        <p class="text-center">No beers are available.</p>
     {% endif %}
-    <a href="{% url 'add_beer' %}">Add a New Beer</a>
-</body>
-</html>
+    <div class="text-center mt-4">
+        <a href="{% url 'add_beer' %}" class="btn btn-primary">Add a New Beer</a>
+    </div>
+</div>
+{% endblock %}

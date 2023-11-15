@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'beerview'
+    'beerview',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
