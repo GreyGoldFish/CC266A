@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from .models import Beer, BeerStyle, Brewery, Review
 from .forms import ReviewForm, BeerForm, BreweryForm, RegisterForm
@@ -51,11 +52,27 @@ def add_brewery(request):
     if request.method == "POST":
         form = BreweryForm(request.POST)
         if form.is_valid():
-            form.save()
+            brewery = form.save(commit=False)
+            brewery.user = request.user  # Set the creator to the current user
+            brewery.save()
+            messages.success(request, "New brewery added successfully.")
             return redirect('breweries')
     else:
         form = BreweryForm()
     return render(request, 'beerview/brewery_form.html', {'form': form})
+
+@login_required
+def delete_brewery(request, brewery_id):
+    brewery = get_object_or_404(Brewery, id=brewery_id)
+
+    # Check if the current user is the creator of the brewery
+    if request.user == brewery.creator:
+        brewery.delete()
+        messages.success(request, "Brewery successfully deleted.")
+    else:
+        messages.error(request, "You do not have permission to delete this brewery.")
+
+    return redirect('breweries')
 
 def beer_styles(request):
     beer_styles = BeerStyle.objects.all()
@@ -100,20 +117,29 @@ def beer_details(request, beer_id):
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    beer_id = review.beer.id
-    review.delete()
-    return redirect('beer_details', beer_id=beer_id)
+
+    # Check if the current user is the user of the review
+    if request.user == review.user:
+        review.delete()
+        messages.success(request, "Review successfully deleted.")
+    else:
+        messages.error(request, "You do not have permission to delete this review.")
+
+    return redirect('beer_details', beer_id=review.beer.id)
 
 @login_required
 def add_beer(request):
     if request.method == "POST":
         form = BeerForm(request.POST)
         if form.is_valid():
-            form.save()
+            beer = form.save(commit=False)
+            beer.user = request.user
+            beer.save()
             return redirect('index')
     else:
         form = BeerForm()
     return render(request, 'beerview/beer_form.html', {'form': form})
+
 
 @login_required
 def update_beer(request, beer_id):
@@ -130,7 +156,14 @@ def update_beer(request, beer_id):
 @login_required
 def delete_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
-    beer.delete()
+
+    # Check if the current user is the user of the beer
+    if request.user == beer.user:
+        beer.delete()
+        messages.success(request, "Beer successfully deleted.")
+    else:
+        messages.error(request, "You do not have permission to delete this beer.")
+
     return redirect('index')
 
 def register(request):

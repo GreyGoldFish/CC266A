@@ -10,6 +10,7 @@ urlpatterns = [
     path('brewery/<int:brewery_id>/', views.brewery_details, name='brewery_details'),
     path('brewery/search/', views.search_breweries, name='search_breweries'),
     path('brewery/add/', views.add_brewery, name='add_brewery'),
+    path('brewery/delete/<int:brewery_id>/', views.delete_brewery, name='delete_brewery'),
     path('beer/<int:beer_id>/', views.beer_details, name='beer_details'),
     path('beer/add/', views.add_beer, name='add_beer'),
     path('beer/update/<int:beer_id>/', views.update_beer, name='update_beer'),

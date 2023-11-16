@@ -33,6 +33,10 @@
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
+                            <!-- Placeholder -->
+                            <a class="nav-link" href="#">{{ user.username|capfirst }}</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                         </li>
                         {% if user.is_staff %}

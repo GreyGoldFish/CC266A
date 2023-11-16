@@ -115,7 +115,11 @@ class Brewery(models.Model):
         Address,
         on_delete=models.CASCADE
     )
-
+    user = models.ForeignKey(
+        'auth.User',
+        on_delete=models.SET_NULL,
+        null=True
+    )
     class Meta:
         verbose_name_plural = "breweries"
     
@@ -129,6 +133,11 @@ class Beer(models.Model):
         Brewery,
         on_delete=models.CASCADE,
         related_name="beers"
+    )
+    user = models.ForeignKey(
+        'auth.User',
+        on_delete=models.SET_NULL,
+        null=True
     )
     style = models.ForeignKey(
         BeerStyle,

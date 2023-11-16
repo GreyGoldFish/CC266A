@@ -10,10 +10,12 @@
                 <h5 class="card-title">{{ review.user.username }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}</h6>
                 <p class="card-text">{{ review.comment }}</p>
-                <form method="post" action="{% url 'delete_review' review.id %}">
-                    {% csrf_token %}
-                    {% bootstrap_button button_type="submit" content="Delete Review" button_class="btn-danger" %}
-                </form>
+                {% if request.user == review.user or request.user.is_superuser %}
+                    <form method="post" action="{% url 'delete_review' review.id %}">
+                        {% csrf_token %}
+                        {% bootstrap_button button_type="submit" content="Delete Review" button_class="btn-danger" %}
+                    </form>
+                {% endif %}
             </div>
         </div>
     {% endfor %}
@@ -25,15 +27,19 @@
             {% bootstrap_button button_type="submit" content="Submit Review" %}
         </form>
     </div>
-    <div class="mt-3">
-        <form method="post" action="{% url 'delete_beer' beer.id %}">
-            {% csrf_token %}
-            {% bootstrap_button button_type="submit" content="Delete Beer" button_class="btn-danger" %}
-        </form>
-    </div>
-    <div class="mt-3 text-center">
-        <a href="{% url 'update_beer' beer.id %}" class="btn btn-secondary">Edit Beer</a>
-        <a href="{% url 'index' %}" class="btn btn-secondary">Back to Beer List</a>
-    </div>
+    {% if request.user == beer.user or request.user.is_superuser %}
+        <div class="mt-3">
+            <form method="post" action="{% url 'delete_beer' beer.id %}">
+                {% csrf_token %}
+                {% bootstrap_button button_type="submit" content="Delete Beer" button_class="btn-danger" %}
+            </form>
+        </div>
+    {% endif %}
+    {% if request.user == beer.user or request.user.is_superuser %}
+        <div class="mt-3 text-center">
+            <a href="{% url 'update_beer' beer.id %}" class="btn btn-secondary">Edit Beer</a>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Back to Beer List</a>
+        </div>
+    {% endif %}
 </div>
 {% endblock %}
