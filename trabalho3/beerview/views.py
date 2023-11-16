@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
 
-from .models import Beer, Review
+from .models import Beer, BeerStyle, Review
 from .forms import ReviewForm, BeerForm
 
 def index(request):
@@ -13,6 +13,14 @@ def index(request):
 
     return render(request, "beerview/index.html", context)
 
+def beer_styles(request):
+    beer_styles = BeerStyle.objects.all()
+
+    context = {
+        "beer_styles": beer_styles,
+    }
+
+    return render(request, "beerview/beer_styles.html", context)
 
 def beer_details(request, beer_id):
     beer = get_object_or_404(Beer, pk=beer_id)
@@ -36,14 +44,6 @@ def delete_review(request, review_id):
     beer_id = review.beer.id
     review.delete()
     return redirect('beer_details', beer_id=beer_id)
-
-def search_beers(request):
-    query = request.GET.get('q')
-    if query:
-        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
-    else:
-        beers = Beer.objects.all()
-    return render(request, 'beerview/index.html', {'beers': beers})
 
 def add_beer(request):
     if request.method == "POST":
@@ -70,3 +70,11 @@ def delete_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
     beer.delete()
     return redirect('index')
+
+def search_beers(request):
+    query = request.GET.get('q')
+    if query:
+        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    else:
+        beers = Beer.objects.all()
+    return render(request, 'beerview/index.html', {'beers': beers})
