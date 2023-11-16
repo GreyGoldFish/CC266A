@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="py-5">
+    <h1 class="text-center">{{ brewery.name }} Beers</h1>
+    <div class="list-group mb-4">
+        {% for beer in beers %}
+            <a href="{% url 'beer_details' beer.id %}" class="list-group-item list-group-item-action">{{ beer.name }}</a>
+        {% empty %}
+            <p class="text-center">No beers available for this brewery.</p>
+        {% endfor %}
+    </div>
+
+    <div class="mt-4">
+        <h3>Add a Beer to {{ brewery.name }}</h3>
+        <form method="post" action="{% url 'add_beer' brewery.id %}" class="mt-3">
+            {% csrf_token %}
+            <input type="hidden" name="brewery_id" value="{{ brewery.id }}"> <!-- Hidden field to pass brewery ID -->
+            {% bootstrap_form beer_form %}
+            {% bootstrap_button button_type="submit" content="Add Beer" %}
+        </form>
+    </div>
+    <div class="mt-3 text-center">
+        <a href="{% url 'breweries' %}" class="btn btn-secondary">Back to Breweries</a>
+    </div>
+</div>
+{% endblock %}

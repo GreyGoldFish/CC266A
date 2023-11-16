@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="py-5">
+    <h1 class="text-center">Available Breweries</h1>
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+            <form method="get" action="{% url 'search_breweries' %}" class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search breweries...">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    {% if breweries %}
+        <div class="list-group">
+        {% for brewery in breweries %}
+            <a href="{% url 'brewery_details' brewery.id %}" class="list-group-item list-group-item-action">{{ brewery.name }}</a>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">No breweries are available.</p>
+    {% endif %}
+    <div class="text-center mt-4">
+        <a href="{% url 'add_brewery' %}" class="btn btn-primary">Add a New Brewery</a>
+    </div>
+</div>
+{% endblock %}
