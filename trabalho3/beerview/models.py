@@ -68,7 +68,7 @@ class BeerStyle(models.Model):
     history = models.TextField(blank=True)
 
     def __str__(self):
-        return f"{self.name} ({self.family})"
+        return f"{self.name} ({self.get_family_display()})"
 
 class Address(models.Model):
     line1 = models.CharField(
@@ -185,7 +185,7 @@ class Review(models.Model):
     )
     rating = models.DecimalField(
         max_digits=2,
-        decimal_places=1    ,
+        decimal_places=1,
         validators=[
             MinValueValidator(Decimal('0.00')), 
             MaxValueValidator(Decimal('5.00'))
