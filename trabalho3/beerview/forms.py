@@ -29,13 +29,6 @@ class ReviewForm(forms.ModelForm):
     # Additional custom validations can be added here
 
 class BeerForm(forms.ModelForm):
-    # Explicitly define the brewery field to use ModelChoiceField, which generates a select box.
-    brewery = forms.ModelChoiceField(
-        queryset=Brewery.objects.all(),
-        widget=forms.Select(attrs={'class': 'form-control'}),
-        required=False  # Set to False if the brewery can be blank, or remove this if it's required
-    )
-
     class Meta:
         model = Beer
         fields = ['name', 'brewery', 'style', 'abv', 'ibu', 'srm', 'description']

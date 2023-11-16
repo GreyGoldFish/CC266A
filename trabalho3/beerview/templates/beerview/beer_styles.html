@@ -1,2 +1,17 @@
 {% extends 'base_generic.html' %}
 {% load django_bootstrap5 %}
+
+{% block content %}
+<div class="py-5">
+    <h1 class="text-center">Beer Styles</h1>
+    {% if beer_styles %}
+        <div class="list-group">
+        {% for beer_style in beer_styles %}
+            <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">{{ beer_style.name }}</a>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">No styles are available.</p>
+    {% endif %}
+</div>
+{% endblock %}

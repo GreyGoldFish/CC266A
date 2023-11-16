@@ -43,17 +43,7 @@ def brewery_details(request, brewery_id):
     brewery = get_object_or_404(Brewery, pk=brewery_id)
     beers = brewery.beers.all()
 
-    if request.method == "POST":
-        beer_form = BeerForm(request.POST)
-        if beer_form.is_valid():
-            beer = beer_form.save(commit=False)
-            beer.brewery = brewery
-            beer.save()
-            return redirect('brewery_details', brewery_id=brewery.id)
-    else:
-        beer_form = BeerForm()
-
-    return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers, 'beer_form': beer_form})
+    return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers})
 
 def add_brewery(request):
     if request.method == "POST":
@@ -64,6 +54,21 @@ def add_brewery(request):
     else:
         form = BreweryForm()
     return render(request, 'beerview/brewery_form.html', {'form': form})
+
+def beer_styles(request):
+    beer_styles = BeerStyle.objects.all()
+
+    context = {
+        "beer_styles": beer_styles,
+    }
+
+    return render(request, "beerview/beer_styles.html", context)
+
+def beer_style_details(request, beer_style_id):
+    beer_style = get_object_or_404(BeerStyle, pk=beer_style_id)
+    beers = beer_style.beers.all()
+
+    return render(request, 'beerview/beer_style_details.html', {'beer_style': beer_style, 'beers': beers})
 
 def search_beers(request):
     query = request.GET.get('q')
@@ -96,20 +101,15 @@ def delete_review(request, review_id):
     review.delete()
     return redirect('beer_details', beer_id=beer_id)
 
-def add_beer(request, brewery_id=None):
+def add_beer(request):
     if request.method == "POST":
         form = BeerForm(request.POST)
         if form.is_valid():
-            beer = form.save(commit=False)
-            brewery_id = request.POST.get('brewery_id')
-            if brewery_id:
-                beer.brewery = get_object_or_404(Brewery, pk=brewery_id)
-            beer.save()
+            form.save()
             return redirect('index')
     else:
         form = BeerForm()
     return render(request, 'beerview/beer_form.html', {'form': form})
-
 
 def update_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
