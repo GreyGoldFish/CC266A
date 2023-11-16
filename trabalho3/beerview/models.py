@@ -11,15 +11,16 @@ class BeerStyle(models.Model):
         ('BO', 'Bock'),
         ('BA', 'Brown Ale'),
         ('DA', 'Dark Ale'),
-        ('IP', 'Indian Pale Ale'),
+        ('HY', 'Hybrid Beer'),
+        ('IP', 'India Pale Ale'),
         ('PA', 'Pale Ale'),
         ('PL', 'Pale Lager'),
         ('PO', 'Porter'),
-        ('ES', 'Especial'),
+        ('ES', 'Specialty Beer'),
         ('ST', 'Stout'),
         ('SA', 'Strong Ale'),
         ('WH', 'Wheat Beer'),
-        ('WI', 'Wild Beer'),
+        ('WI', 'Wild/Sour Beer'),
     ]
 
     name = models.CharField(

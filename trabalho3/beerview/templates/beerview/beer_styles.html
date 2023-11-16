@@ -4,14 +4,23 @@
 {% block content %}
 <div class="py-5">
     <h1 class="text-center">Beer Styles</h1>
-    {% if beer_styles %}
-        <div class="list-group">
-        {% for beer_style in beer_styles %}
-            <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">{{ beer_style.name }}</a>
-        {% endfor %}
-        </div>
-    {% else %}
-        <p class="text-center">No styles are available.</p>
-    {% endif %}
+    <div class="row">
+        {% if beer_styles %}
+            {% for family_code, family_name in beer_styles.model.FAMILIES %}
+                <div class="col-md-4"> <!-- Adjust the column size as needed -->
+                    <h3>{{ family_name }}</h3>
+                    <div class="list-group list-group-flush mb-4">
+                        {% for beer_style in beer_styles %}
+                            {% if beer_style.family == family_name %}
+                                <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">{{ beer_style.name }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-center">No styles are available.</p>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
