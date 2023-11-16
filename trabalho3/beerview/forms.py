@@ -33,7 +33,7 @@ class ReviewForm(forms.ModelForm):
 class BeerForm(forms.ModelForm):
     class Meta:
         model = Beer
-        fields = ['name', 'brewery', 'style', 'abv', 'ibu', 'srm', 'description']
+        fields = ['name', 'picture', 'brewery', 'style', 'abv', 'ibu', 'srm', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'style': forms.Select(attrs={'class': 'form-control'}),
@@ -67,7 +67,7 @@ class BreweryForm(forms.ModelForm):
 
     class Meta:
         model = Brewery
-        fields = ['name', 'line1', 'line2', 'city', 'region', 'postal_code', 'country']
+        fields = ['name', 'picture', 'line1', 'line2', 'city', 'region', 'postal_code', 'country']
 
     def save(self, commit=True):
         # Overriding the save method to handle address creation

@@ -111,6 +111,7 @@ class Address(models.Model):
 
 class Brewery(models.Model):
     name = models.CharField(max_length=255)
+    picture = models.ImageField(upload_to='breweries/', blank=True, null=True)
     address = models.OneToOneField(
         Address,
         on_delete=models.CASCADE
@@ -129,6 +130,7 @@ class Brewery(models.Model):
 
 class Beer(models.Model):
     name = models.CharField(max_length=200)
+    picture = models.ImageField(upload_to='beers/', blank=True, null=True)
     brewery = models.ForeignKey(
         Brewery,
         on_delete=models.CASCADE,

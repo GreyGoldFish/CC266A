@@ -3,6 +3,11 @@
 
 {% block content %}
 <div class="py-5">
+    {% if brewery.image %}
+    <div class="text-center">
+        <img src="{{ brewery.image.url }}" alt="{{ brewery.name }}" style="max-width: 300px; height: auto;">
+    </div>
+    {% endif %}
     <h1 class="text-center">{{ brewery.name }} Beers</h1>
     <div class="list-group mb-4">
         {% for beer in beers %}

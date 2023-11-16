@@ -50,7 +50,7 @@ def brewery_details(request, brewery_id):
 @login_required
 def add_brewery(request):
     if request.method == "POST":
-        form = BreweryForm(request.POST)
+        form = BreweryForm(request.POST, request.FILES)
         if form.is_valid():
             brewery = form.save(commit=False)
             brewery.user = request.user  # Set the creator to the current user
@@ -130,7 +130,7 @@ def delete_review(request, review_id):
 @login_required
 def add_beer(request):
     if request.method == "POST":
-        form = BeerForm(request.POST)
+        form = BeerForm(request.POST, request.FILES)
         if form.is_valid():
             beer = form.save(commit=False)
             beer.user = request.user
