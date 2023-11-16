@@ -1,0 +1,1922 @@
+[
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Bock",
+            "description": "A strong, malty lager",
+            "family": "Bock",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 12,
+            "max_srm": 22,
+            "min_abv": 6.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Rich and malty",
+            "history": "Originating in Germany, Bocks are known for their robust flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Doppelbock",
+            "description": "A stronger version of Bock",
+            "family": "Bock",
+            "min_ibu": 25,
+            "max_ibu": 35,
+            "min_srm": 15,
+            "max_srm": 25,
+            "min_abv": 7.0,
+            "max_abv": 9.0,
+            "flavor_profile": "Intensely malty",
+            "history": "Originally brewed by monks for sustenance during Lent."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Eisbock",
+            "description": "A Bock beer that's been frozen",
+            "family": "Bock",
+            "min_ibu": 30,
+            "max_ibu": 40,
+            "min_srm": 18,
+            "max_srm": 28,
+            "min_abv": 9.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Sweet and ice-like",
+            "history": "Created accidentally when a Bock beer froze, concentrating its flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Maibock",
+            "description": "A pale and hoppy Bock",
+            "family": "Bock",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 6.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Hoppy and crisp",
+            "history": "Traditionally brewed in May for spring celebrations."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Weizenbock",
+            "description": "A wheat-based Bock",
+            "family": "Bock",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 8,
+            "max_srm": 15,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Banana and clove",
+            "history": "A marriage of Bock and wheat beer styles."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Altbier",
+            "description": "A German-style ale",
+            "family": "Brown Ale",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 12,
+            "max_srm": 22,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Balanced and malty",
+            "history": "Hailing from D\u00fcsseldorf, Germany, known for its unique fermentation."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Brown Ale",
+            "description": "A hoppy brown ale",
+            "family": "Brown Ale",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 15,
+            "max_srm": 30,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Hoppy and nutty",
+            "history": "An American twist on the traditional English Brown Ale."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian Dark Ale",
+            "description": "A Belgian-style dark ale",
+            "family": "Brown Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 12,
+            "max_srm": 20,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Fruity and spicy",
+            "history": "Belgian craftsmanship meets dark, flavorful malts."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Brown Ale",
+            "description": "A classic English ale",
+            "family": "Brown Ale",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 12,
+            "max_srm": 20,
+            "min_abv": 3.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Mellow and nutty",
+            "history": "A staple of British pubs, known for its drinkability."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Dark Mild Ale",
+            "description": "A mild and dark ale",
+            "family": "Brown Ale",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 10,
+            "max_srm": 16,
+            "min_abv": 3.0,
+            "max_abv": 4.0,
+            "flavor_profile": "Malty and caramel",
+            "history": "A low-alcohol, sessionable ale with a rich malt character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Dubbel",
+            "description": "A strong Belgian ale",
+            "family": "Dark Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 15,
+            "max_srm": 25,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Rich and fruity",
+            "history": "Originally brewed by Trappist monks, known for its complexity and dark fruit notes."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Roggenbier",
+            "description": "A German rye beer",
+            "family": "Dark Ale",
+            "min_ibu": 15,
+            "max_ibu": 30,
+            "min_srm": 8,
+            "max_srm": 18,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Spicy and earthy",
+            "history": "A rare style, brewed with rye malt, giving it a unique spiciness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Scottish Ale",
+            "description": "A malty Scottish ale",
+            "family": "Dark Ale",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 3.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Malty and caramel",
+            "history": "Hailing from Scotland, known for its malty sweetness and low bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Winter Warmer",
+            "description": "A spiced winter ale",
+            "family": "Dark Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Spicy and warming",
+            "history": "Typically brewed during the winter months with spices and higher alcohol content."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Amber / Red Lager",
+            "description": "A hoppy amber lager",
+            "family": "Dark Lager",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 10,
+            "max_srm": 18,
+            "min_abv": 5.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Hoppy and caramel",
+            "history": "An American take on the Vienna Lager, known for its balance between malt and hops."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Czech Amber Lager",
+            "description": "A Czech amber lager",
+            "family": "Dark Lager",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 10,
+            "max_srm": 18,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Balanced and toasty",
+            "history": "A Czech classic with a malt-forward profile and moderate bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Czech Dark Lager",
+            "description": "A dark Czech lager",
+            "family": "Dark Lager",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 12,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Roasty and smooth",
+            "history": "A Czech specialty with dark malts and a clean, crisp finish."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "European Dark Lager",
+            "description": "A European-style dark lager",
+            "family": "Dark Lager",
+            "min_ibu": 18,
+            "max_ibu": 30,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Malty and clean",
+            "history": "A lager style popular in Europe, offering a balanced malt profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "M\u00e4rzen",
+            "description": "A traditional German lager",
+            "family": "Dark Lager",
+            "min_ibu": 20,
+            "max_ibu": 28,
+            "min_srm": 6,
+            "max_srm": 16,
+            "min_abv": 5.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Toasty and balanced",
+            "history": "Originally brewed in March (M\u00e4rz in German), known for its amber color and maltiness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Munich Dunkel",
+            "description": "A dark Bavarian lager",
+            "family": "Dark Lager",
+            "min_ibu": 18,
+            "max_ibu": 28,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Caramel and nutty",
+            "history": "A Munich classic, characterized by its malt-forward, dark, and smooth nature."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Rauchbier",
+            "description": "A smoked German lager",
+            "family": "Dark Lager",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 12,
+            "max_srm": 22,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Smoky and robust",
+            "history": "Brewed with smoked malt, known for its distinctive smoky aroma and flavor."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Schwarzbier",
+            "description": "A German black lager",
+            "family": "Dark Lager",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 17,
+            "max_srm": 30,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Roasty and clean",
+            "history": "Often called \"Black Pilsner,\" it's a dark lager with a smooth and roasty character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Vienna Lager",
+            "description": "A Vienna-style lager",
+            "family": "Dark Lager",
+            "min_ibu": 18,
+            "max_ibu": 30,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Malty and amber",
+            "history": "Originating in Vienna, it's known for its moderate bitterness and toasty maltiness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Bi\u00e8re de Champagne / Bi\u00e8re Brut",
+            "description": "Champagne-style beer",
+            "family": "Hybrid Beer",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Effervescent and dry",
+            "history": "Inspired by Champagne, it undergoes a second fermentation for a bubbly, dry finish."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Braggot",
+            "description": "A mead and beer hybrid",
+            "family": "Hybrid Beer",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 8,
+            "max_srm": 18,
+            "min_abv": 6.0,
+            "max_abv": 10.0,
+            "flavor_profile": "Honey and malty",
+            "history": "Combines malt and honey, an ancient style enjoying a resurgence in craft brewing."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "California Common / Steam Beer",
+            "description": "A unique American style",
+            "family": "Hybrid Beer",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 10,
+            "max_srm": 18,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Crisp and fruity",
+            "history": "Originally from California, known for its lager yeast at ale fermentation temperatures."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Cream Ale",
+            "description": "A light and creamy ale",
+            "family": "Hybrid Beer",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Smooth and mild",
+            "history": "A hybrid style with ale yeast and lagering, offering a clean and crisp profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American IPA",
+            "description": "A hop-forward American ale",
+            "family": "India Pale Ale",
+            "min_ibu": 40,
+            "max_ibu": 70,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 6.0,
+            "max_abv": 7.5,
+            "flavor_profile": "Hoppy and citrusy",
+            "history": "A modern classic known for its bold hop flavors and aromas."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian IPA",
+            "description": "A Belgian-style hoppy ale",
+            "family": "India Pale Ale",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Spicy and fruity",
+            "history": "Combines Belgian yeast character with American hop bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Black IPA",
+            "description": "A dark and hoppy ale",
+            "family": "India Pale Ale",
+            "min_ibu": 40,
+            "max_ibu": 70,
+            "min_srm": 15,
+            "max_srm": 30,
+            "min_abv": 6.0,
+            "max_abv": 7.5,
+            "flavor_profile": "Roasty and hoppy",
+            "history": "Also known as Cascadian Dark Ale, it blends dark malts with IPA hoppiness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Brut IPA",
+            "description": "A champagne-like IPA",
+            "family": "India Pale Ale",
+            "min_ibu": 40,
+            "max_ibu": 70,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 6.0,
+            "max_abv": 7.5,
+            "flavor_profile": "Dry and effervescent",
+            "history": "A recent innovation characterized by its bone-dry finish and high carbonation."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English IPA",
+            "description": "A balanced British IPA",
+            "family": "India Pale Ale",
+            "min_ibu": 35,
+            "max_ibu": 55,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Balanced and floral",
+            "history": "A traditional British take on the IPA, with a more restrained hop character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Imperial IPA",
+            "description": "A strong and hoppy ale",
+            "family": "India Pale Ale",
+            "min_ibu": 60,
+            "max_ibu": 100,
+            "min_srm": 8,
+            "max_srm": 15,
+            "min_abv": 7.5,
+            "max_abv": 10.0,
+            "flavor_profile": "Intensely hoppy",
+            "history": "Known for its high alcohol content and bold hop flavors, a favorite of hopheads."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Milkshake IPA",
+            "description": "A creamy and fruity IPA",
+            "family": "India Pale Ale",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 6,
+            "max_srm": 12,
+            "min_abv": 6.0,
+            "max_abv": 7.5,
+            "flavor_profile": "Fruity and creamy",
+            "history": "Contains lactose for a creamy mouthfeel and often includes fruit additions."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "New England IPA",
+            "description": "A hazy and juicy IPA",
+            "family": "India Pale Ale",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 4,
+            "max_srm": 10,
+            "min_abv": 6.0,
+            "max_abv": 7.5,
+            "flavor_profile": "Juicy and hazy",
+            "history": "A newer style known for its cloudiness and juicy, tropical fruit flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Amber / Red Ale",
+            "description": "A malt-forward American ale",
+            "family": "Pale Ale",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 10,
+            "max_srm": 14,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Malty and caramel",
+            "history": "An American classic, offering a balance of malt sweetness and hop bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Blonde Ale",
+            "description": "A light and approachable ale",
+            "family": "Pale Ale",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Crisp and easy-drinking",
+            "history": "A crowd-pleaser with a clean and mild flavor profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Pale Ale",
+            "description": "A hoppy and refreshing ale",
+            "family": "Pale Ale",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 5,
+            "max_srm": 10,
+            "min_abv": 4.5,
+            "max_abv": 6.0,
+            "flavor_profile": "Hoppy and citrusy",
+            "history": "An iconic American style known for its hop character and balance."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian Blonde Ale",
+            "description": "A Belgian-style blonde ale",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Fruity and spicy",
+            "history": "Brewed in Belgium, it combines fruity yeast esters with a pale malt backbone."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian Pale Ale",
+            "description": "A Belgian-style pale ale",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Balanced and fruity",
+            "history": "Known for its moderate alcohol content and Belgian yeast character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Bi\u00e8re de Garde",
+            "description": "A French farmhouse ale",
+            "family": "Pale Ale",
+            "min_ibu": 18,
+            "max_ibu": 28,
+            "min_srm": 6,
+            "max_srm": 12,
+            "min_abv": 4.5,
+            "max_abv": 8.0,
+            "flavor_profile": "Rustic and malt-forward",
+            "history": "Originating in France, it's often aged and exhibits a range of malt flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Bitter",
+            "description": "A sessionable British ale",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 5,
+            "max_srm": 12,
+            "min_abv": 3.0,
+            "max_abv": 4.0,
+            "flavor_profile": "Balanced and mild",
+            "history": "A traditional British pub beer known for its easy-drinking nature."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Pale Ale",
+            "description": "A classic British ale",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Malty and balanced",
+            "history": "Known for its moderate hop bitterness and malt-forward character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Pale Mild Ale",
+            "description": "A low-alcohol British ale",
+            "family": "Pale Ale",
+            "min_ibu": 10,
+            "max_ibu": 25,
+            "min_srm": 8,
+            "max_srm": 18,
+            "min_abv": 2.8,
+            "max_abv": 4.0,
+            "flavor_profile": "Light and sessionable",
+            "history": "A mild beer with a focus on maltiness, perfect for extended drinking sessions."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Extra Special / Strong Bitter (ESB)",
+            "description": "A strong British ale",
+            "family": "Pale Ale",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 8,
+            "max_srm": 14,
+            "min_abv": 4.5,
+            "max_abv": 6.0,
+            "flavor_profile": "Bitter and caramel",
+            "history": "A traditional British pub ale, known for its balanced bitterness and malt sweetness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Grisette",
+            "description": "A light and rustic Belgian ale",
+            "family": "Pale Ale",
+            "min_ibu": 15,
+            "max_ibu": 30,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Crisp and fruity",
+            "history": "Originally brewed for miners in Belgium, it's a refreshing and low-alcohol beer."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Irish Red Ale",
+            "description": "A malt-focused Irish ale",
+            "family": "Pale Ale",
+            "min_ibu": 17,
+            "max_ibu": 28,
+            "min_srm": 9,
+            "max_srm": 14,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Malty and toasty",
+            "history": "A classic Irish style, known for its reddish hue and balanced malt character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "K\u00f6lsch",
+            "description": "A clean and crisp German ale",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 4.4,
+            "max_abv": 5.2,
+            "flavor_profile": "Balanced and delicate",
+            "history": "Brewed in Cologne, Germany, it's an ale that's lagered for a clean, refreshing profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Saison",
+            "description": "A farmhouse ale with a twist",
+            "family": "Pale Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 4,
+            "max_srm": 14,
+            "min_abv": 4.5,
+            "max_abv": 7.0,
+            "flavor_profile": "Fruity and spicy",
+            "history": "Originally brewed in Belgian farmhouses, it's now made with various flavor additions."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Adjunct Lager",
+            "description": "An American-style light lager",
+            "family": "Pale Lager",
+            "min_ibu": 8,
+            "max_ibu": 18,
+            "min_srm": 2,
+            "max_srm": 4,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Crisp and light",
+            "history": "Often includes corn or rice adjuncts for a clean and approachable taste."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Lager",
+            "description": "A classic American lager",
+            "family": "Pale Lager",
+            "min_ibu": 10,
+            "max_ibu": 20,
+            "min_srm": 2,
+            "max_srm": 5,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Clean and refreshing",
+            "history": "An iconic American beer style, known for its light and easy-drinking nature."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Bohemian / Czech Pilsner",
+            "description": "A Czech-style pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Crisp and hoppy",
+            "history": "A Czech classic with a balanced hop bitterness and golden color."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Czech Pale Lager",
+            "description": "A Czech pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Balanced and smooth",
+            "history": "A lighter version of the Czech Pilsner, known for its drinkability."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "European / Dortmunder Export Lager",
+            "description": "A European pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 4.5,
+            "max_abv": 6.0,
+            "flavor_profile": "Crisp and malt-forward",
+            "history": "Originally from Dortmund, Germany, it's a well-balanced, export-style lager."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "European Pale Lager",
+            "description": "A European-style pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 4.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Light and refreshing",
+            "history": "A lager style popular in Europe, known for its clean and easy-drinking nature."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "European Strong Lager",
+            "description": "A strong European lager",
+            "family": "Pale Lager",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 6.5,
+            "max_abv": 9.0,
+            "flavor_profile": "Robust and malty",
+            "history": "Strong lagers vary in flavor, but they tend to be maltier and higher in alcohol content."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Festbier / Wiesnbier",
+            "description": "A traditional German festival lager",
+            "family": "Pale Lager",
+            "min_ibu": 20,
+            "max_ibu": 30,
+            "min_srm": 5,
+            "max_srm": 10,
+            "min_abv": 4.5,
+            "max_abv": 6.0,
+            "flavor_profile": "Balanced and amber",
+            "history": "Brewed for Oktoberfest celebrations in Germany, it's known for its drinkability."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "German Pilsner",
+            "description": "A classic German pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 25,
+            "max_ibu": 45,
+            "min_srm": 2,
+            "max_srm": 5,
+            "min_abv": 4.5,
+            "max_abv": 5.5,
+            "flavor_profile": "Crisp and hoppy",
+            "history": "A staple in Germany, known for its clean taste and noble hop bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Helles",
+            "description": "A German-style pale lager",
+            "family": "Pale Lager",
+            "min_ibu": 18,
+            "max_ibu": 25,
+            "min_srm": 3,
+            "max_srm": 5,
+            "min_abv": 4.5,
+            "max_abv": 5.5,
+            "flavor_profile": "Malty and smooth",
+            "history": "A Munich classic, offering a malt-forward profile and a light, golden appearance."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Imperial Pilsner",
+            "description": "A strong and hoppy pilsner",
+            "family": "Pale Lager",
+            "min_ibu": 45,
+            "max_ibu": 60,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 6.5,
+            "max_abv": 8.0,
+            "flavor_profile": "Hoppy and bold",
+            "history": "A higher-alcohol version of the Pilsner style with more pronounced hop bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "India Pale Lager (IPL)",
+            "description": "A lager with IPA characteristics",
+            "family": "Pale Lager",
+            "min_ibu": 40,
+            "max_ibu": 70,
+            "min_srm": 6,
+            "max_srm": 14,
+            "min_abv": 5.5,
+            "max_abv": 7.0,
+            "flavor_profile": "Hoppy and crisp",
+            "history": "Combines the clean profile of a lager with the hoppy attributes of an IPA."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Kellerbier / Zwickelbier",
+            "description": "An unfiltered German lager",
+            "family": "Pale Lager",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 4.5,
+            "max_abv": 5.5,
+            "flavor_profile": "Fresh and hazy",
+            "history": "Typically served straight from the fermentation tank, it's known for its freshness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Light Lager",
+            "description": "A light and low-calorie lager",
+            "family": "Pale Lager",
+            "min_ibu": 8,
+            "max_ibu": 15,
+            "min_srm": 2,
+            "max_srm": 3,
+            "min_abv": 3.0,
+            "max_abv": 4.0,
+            "flavor_profile": "Light and crisp",
+            "history": "Designed for a lower calorie intake while maintaining a light, refreshing taste."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Malt Liquor",
+            "description": "A high-alcohol lager",
+            "family": "Pale Lager",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 3,
+            "max_srm": 5,
+            "min_abv": 6.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Sweet and alcoholic",
+            "history": "Known for its higher alcohol content and sweet, grainy flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Porter",
+            "description": "A dark and roasty ale",
+            "family": "Porter",
+            "min_ibu": 25,
+            "max_ibu": 40,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Roasty and chocolatey",
+            "history": "A classic American style with dark malt flavors and a hint of bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Baltic Porter",
+            "description": "A strong and dark lager",
+            "family": "Porter",
+            "min_ibu": 30,
+            "max_ibu": 45,
+            "min_srm": 17,
+            "max_srm": 30,
+            "min_abv": 6.0,
+            "max_abv": 9.0,
+            "flavor_profile": "Rich and smooth",
+            "history": "Originally brewed in the Baltic region, it's a strong, dark lager with complex flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Porter",
+            "description": "A classic English dark ale",
+            "family": "Porter",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 3.0,
+            "max_abv": 5.0,
+            "flavor_profile": "Malty and balanced",
+            "history": "Known for its chocolate and caramel notes, it's a favorite in British pubs."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Imperial Porter",
+            "description": "A strong and robust ale",
+            "family": "Porter",
+            "min_ibu": 40,
+            "max_ibu": 60,
+            "min_srm": 25,
+            "max_srm": 40,
+            "min_abv": 7.0,
+            "max_abv": 10.0,
+            "flavor_profile": "Intensely roasty",
+            "history": "A higher-alcohol version of the porter style, often with bold coffee and chocolate notes."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Robust Porter",
+            "description": "A dark and hearty ale",
+            "family": "Porter",
+            "min_ibu": 25,
+            "max_ibu": 50,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Roasty and bold",
+            "history": "Known for its rich, roasted malt flavors, it's a robust and flavorful dark ale."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Smoked Porter",
+            "description": "A smoked dark ale",
+            "family": "Porter",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 5.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Smoky and complex",
+            "history": "Brewed with smoked malt, it offers a unique smokiness and complexity."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Chile Beer",
+            "description": "A spicy and flavorful beer",
+            "family": "Specialty Beer",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 12,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Spicy and bold",
+            "history": "Often made with chili peppers, providing heat and unique flavors to the beer."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Fruit and Field Beer",
+            "description": "A beer with added fruits",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 25,
+            "min_srm": 3,
+            "max_srm": 8,
+            "min_abv": 3.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Fruity and refreshing",
+            "history": "Includes various fruits or field ingredients to create a fruity and refreshing profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Gruit / Ancient Herbed Ale",
+            "description": "A historic herbal ale",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 20,
+            "min_srm": 3,
+            "max_srm": 10,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Herbal and earthy",
+            "history": "Brewed with a mixture of herbs and spices instead of hops, a traditional style."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Happoshu",
+            "description": "A low-malt Japanese beer",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 20,
+            "min_srm": 4,
+            "max_srm": 8,
+            "min_abv": 3.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Light and mild",
+            "history": "Contains less malt than regular beer to reduce taxes, popular in Japan."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Herb and Spice Beer",
+            "description": "A beer with added herbs",
+            "family": "Specialty Beer",
+            "min_ibu": 10,
+            "max_ibu": 30,
+            "min_srm": 4,
+            "max_srm": 12,
+            "min_abv": 3.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Spicy and aromatic",
+            "history": "Features a variety of herbs and spices for unique and complex flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Japanese Rice Lager",
+            "description": "A rice-based Japanese lager",
+            "family": "Specialty Beer",
+            "min_ibu": 10,
+            "max_ibu": 20,
+            "min_srm": 2,
+            "max_srm": 4,
+            "min_abv": 3.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Clean and crisp",
+            "history": "Made with rice adjuncts, resulting in a light and clean taste, popular in Japan."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Kvass",
+            "description": "A Russian bread beer",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 20,
+            "min_srm": 5,
+            "max_srm": 15,
+            "min_abv": 0.5,
+            "max_abv": 3.0,
+            "flavor_profile": "Bread-like and mild",
+            "history": "Traditionally made from stale bread, offering a unique bready flavor."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Low-Alcohol Beer",
+            "description": "A beer with low alcohol",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 20,
+            "min_srm": 2,
+            "max_srm": 5,
+            "min_abv": 0.5,
+            "max_abv": 3.0,
+            "flavor_profile": "Light and refreshing",
+            "history": "Designed for those seeking a beer with minimal alcohol content."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Pumpkin Beer",
+            "description": "A beer with pumpkin spices",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 25,
+            "min_srm": 5,
+            "max_srm": 15,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Pumpkin and spices",
+            "history": "Typically brewed with pumpkin and spices like cinnamon and nutmeg."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Rye Beer",
+            "description": "A beer with rye malt",
+            "family": "Specialty Beer",
+            "min_ibu": 15,
+            "max_ibu": 40,
+            "min_srm": 5,
+            "max_srm": 14,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Spicy and malty",
+            "history": "Features rye malt alongside barley for a distinctive spicy character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Sahti",
+            "description": "A traditional Finnish ale",
+            "family": "Specialty Beer",
+            "min_ibu": 5,
+            "max_ibu": 15,
+            "min_srm": 5,
+            "max_srm": 12,
+            "min_abv": 6.0,
+            "max_abv": 9.0,
+            "flavor_profile": "Juniper and earthy",
+            "history": "Brewed with juniper branches and berries, it's a historic Finnish beer style."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Smoked Beer",
+            "description": "A beer with smoked malt",
+            "family": "Specialty Beer",
+            "min_ibu": 15,
+            "max_ibu": 30,
+            "min_srm": 8,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Smoky and robust",
+            "history": "Uses malt that has been dried over an open flame or smoked wood, offering smoky flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Imperial Stout",
+            "description": "A strong and dark ale",
+            "family": "Stout",
+            "min_ibu": 50,
+            "max_ibu": 100,
+            "min_srm": 40,
+            "max_srm": 70,
+            "min_abv": 7.5,
+            "max_abv": 12.0,
+            "flavor_profile": "Rich and roasty",
+            "history": "Known for its bold flavors of roasted malt, chocolate, and coffee, often high in alcohol."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Stout",
+            "description": "A bold and flavorful ale",
+            "family": "Stout",
+            "min_ibu": 35,
+            "max_ibu": 75,
+            "min_srm": 40,
+            "max_srm": 70,
+            "min_abv": 5.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Roasty and hoppy",
+            "history": "A hop-forward stout with a robust roastiness, often with American hop varieties."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Stout",
+            "description": "A classic British stout",
+            "family": "Stout",
+            "min_ibu": 25,
+            "max_ibu": 45,
+            "min_srm": 40,
+            "max_srm": 70,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Roasty and smooth",
+            "history": "Known for its dry and roasty character, with flavors of coffee and dark chocolate."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Foreign / Export Stout",
+            "description": "A robust and dark ale",
+            "family": "Stout",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 40,
+            "max_srm": 70,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Roasty and bitter",
+            "history": "Originally brewed for export, it's characterized by its bold roastiness and bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Irish Dry Stout",
+            "description": "A dry and sessionable stout",
+            "family": "Stout",
+            "min_ibu": 30,
+            "max_ibu": 40,
+            "min_srm": 25,
+            "max_srm": 40,
+            "min_abv": 3.0,
+            "max_abv": 4.2,
+            "flavor_profile": "Dry and roasty",
+            "history": "Known for its dry finish and lower alcohol content, a staple in Irish pubs."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Oatmeal Stout",
+            "description": "A creamy and smooth stout",
+            "family": "Stout",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Creamy and chocolaty",
+            "history": "Contains oats for a silky texture and flavors of chocolate and coffee."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Russian Imperial Stout",
+            "description": "A strong and rich stout",
+            "family": "Stout",
+            "min_ibu": 50,
+            "max_ibu": 90,
+            "min_srm": 40,
+            "max_srm": 70,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Intensely roasty",
+            "history": "Originally brewed for the Russian court, it's a high-alcohol stout with bold flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Sweet / Milk Stout",
+            "description": "A sweet and creamy stout",
+            "family": "Stout",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 25,
+            "max_srm": 40,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Sweet and velvety",
+            "history": "Contains lactose for a sweet and creamy mouthfeel, often with notes of chocolate."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Barleywine",
+            "description": "A strong and hoppy ale",
+            "family": "Strong Ale",
+            "min_ibu": 50,
+            "max_ibu": 100,
+            "min_srm": 10,
+            "max_srm": 19,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Hoppy and malty",
+            "history": "A high-alcohol ale with a rich malt backbone and pronounced hop bitterness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Strong Ale",
+            "description": "A bold and flavorful ale",
+            "family": "Strong Ale",
+            "min_ibu": 50,
+            "max_ibu": 85,
+            "min_srm": 10,
+            "max_srm": 19,
+            "min_abv": 6.3,
+            "max_abv": 9.3,
+            "flavor_profile": "Robust and hoppy",
+            "history": "Known for its complexity, it combines strong malt character with hoppy notes."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian Dark Strong Ale",
+            "description": "A complex and strong ale",
+            "family": "Strong Ale",
+            "min_ibu": 20,
+            "max_ibu": 50,
+            "min_srm": 12,
+            "max_srm": 30,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Fruity and spicy",
+            "history": "Often brewed by Belgian Trappist monasteries, it's a complex and strong ale."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Belgian Pale Strong Ale",
+            "description": "A fruity and balanced ale",
+            "family": "Strong Ale",
+            "min_ibu": 20,
+            "max_ibu": 50,
+            "min_srm": 4,
+            "max_srm": 14,
+            "min_abv": 7.0,
+            "max_abv": 10.0,
+            "flavor_profile": "Fruity and malty",
+            "history": "A Belgian style that combines fruity yeast esters with a sturdy malt backbone."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Barleywine",
+            "description": "A rich and malty British ale",
+            "family": "Strong Ale",
+            "min_ibu": 35,
+            "max_ibu": 70,
+            "min_srm": 8,
+            "max_srm": 22,
+            "min_abv": 6.5,
+            "max_abv": 11.0,
+            "flavor_profile": "Malty and warming",
+            "history": "Known for its malt sweetness and high alcohol content, often aged like wine."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "English Strong Ale",
+            "description": "A strong and balanced ale",
+            "family": "Strong Ale",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 10,
+            "max_srm": 20,
+            "min_abv": 5.5,
+            "max_abv": 8.0,
+            "flavor_profile": "Balanced and robust",
+            "history": "A traditional British strong ale with a balance of malt and hop character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Imperial Red Ale",
+            "description": "A bold and hoppy ale",
+            "family": "Strong Ale",
+            "min_ibu": 50,
+            "max_ibu": 90,
+            "min_srm": 10,
+            "max_srm": 19,
+            "min_abv": 7.0,
+            "max_abv": 10.0,
+            "flavor_profile": "Hoppy and caramel",
+            "history": "Combines the hoppy nature of an IPA with the maltiness of a red ale, often high in alcohol."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Old Ale",
+            "description": "A rich and aged British ale",
+            "family": "Strong Ale",
+            "min_ibu": 30,
+            "max_ibu": 60,
+            "min_srm": 10,
+            "max_srm": 22,
+            "min_abv": 6.0,
+            "max_abv": 9.0,
+            "flavor_profile": "Rich and caramel",
+            "history": "Typically aged for extended periods, it's known for its complex and aged flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Quadrupel (Quad)",
+            "description": "A strong and complex ale",
+            "family": "Strong Ale",
+            "min_ibu": 25,
+            "max_ibu": 50,
+            "min_srm": 12,
+            "max_srm": 30,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Complex and fruity",
+            "history": "A Belgian-style ale with strong malt character and a variety of fruity notes."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Scotch Ale / Wee Heavy",
+            "description": "A strong and malty Scottish ale",
+            "family": "Strong Ale",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 10,
+            "max_srm": 25,
+            "min_abv": 6.5,
+            "max_abv": 10.0,
+            "flavor_profile": "Malty and caramel",
+            "history": "Hailing from Scotland, it's known for its rich, malty, and caramelized flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Tripel",
+            "description": "A strong and fruity Belgian ale",
+            "family": "Strong Ale",
+            "min_ibu": 20,
+            "max_ibu": 45,
+            "min_srm": 4,
+            "max_srm": 7,
+            "min_abv": 7.5,
+            "max_abv": 9.5,
+            "flavor_profile": "Fruity and spicy",
+            "history": "Typically brewed by Trappist monasteries, it's a strong and complex Belgian ale."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Wheatwine",
+            "description": "A wheat-based strong ale",
+            "family": "Strong Ale",
+            "min_ibu": 30,
+            "max_ibu": 50,
+            "min_srm": 6,
+            "max_srm": 16,
+            "min_abv": 8.0,
+            "max_abv": 12.0,
+            "flavor_profile": "Wheaty and fruity",
+            "history": "A high-alcohol beer made with a significant proportion of wheat in the grain bill."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Dark Wheat Beer",
+            "description": "A dark and wheaty ale",
+            "family": "Wheat Beer",
+            "min_ibu": 15,
+            "max_ibu": 30,
+            "min_srm": 20,
+            "max_srm": 40,
+            "min_abv": 4.5,
+            "max_abv": 7.0,
+            "flavor_profile": "Roasty and wheaty",
+            "history": "Combines dark malts with wheat for a unique blend of roasty and wheaty flavors."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "American Pale Wheat Beer",
+            "description": "A hoppy and wheaty ale",
+            "family": "Wheat Beer",
+            "min_ibu": 20,
+            "max_ibu": 40,
+            "min_srm": 4,
+            "max_srm": 10,
+            "min_abv": 4.0,
+            "max_abv": 6.0,
+            "flavor_profile": "Hoppy and refreshing",
+            "history": "Known for its combination of wheat crispness and hoppy character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Dunkelweizen",
+            "description": "A dark and wheaty German ale",
+            "family": "Wheat Beer",
+            "min_ibu": 10,
+            "max_ibu": 20,
+            "min_srm": 12,
+            "max_srm": 20,
+            "min_abv": 4.3,
+            "max_abv": 5.6,
+            "flavor_profile": "Dark and yeasty",
+            "history": "A traditional German style, known for its dark wheaty malt character and banana notes."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Grodziskie",
+            "description": "A light and smoky Polish ale",
+            "family": "Wheat Beer",
+            "min_ibu": 20,
+            "max_ibu": 35,
+            "min_srm": 3,
+            "max_srm": 6,
+            "min_abv": 2.5,
+            "max_abv": 3.5,
+            "flavor_profile": "Smoky and crisp",
+            "history": "A historic Polish beer style, characterized by its light body and smoky flavor."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Hefeweizen",
+            "description": "A classic German wheat beer",
+            "family": "Wheat Beer",
+            "min_ibu": 10,
+            "max_ibu": 15,
+            "min_srm": 3,
+            "max_srm": 9,
+            "min_abv": 4.3,
+            "max_abv": 5.6,
+            "flavor_profile": "Banana and clove",
+            "history": "Known for its yeast-derived flavors of banana and clove, a beloved German style."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Kristallweizen",
+            "description": "A clear and filtered wheat ale",
+            "family": "Wheat Beer",
+            "min_ibu": 10,
+            "max_ibu": 15,
+            "min_srm": 3,
+            "max_srm": 5,
+            "min_abv": 4.3,
+            "max_abv": 5.6,
+            "flavor_profile": "Crisp and clean",
+            "history": "A filtered version of Hefeweizen, offering a clear appearance and a clean taste."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Witbier",
+            "description": "A Belgian-style wheat beer",
+            "family": "Wheat Beer",
+            "min_ibu": 10,
+            "max_ibu": 20,
+            "min_srm": 2,
+            "max_srm": 4,
+            "min_abv": 4.5,
+            "max_abv": 5.5,
+            "flavor_profile": "Citrus and coriander",
+            "history": "Brewed with orange peel and coriander, it's a refreshing and citrusy Belgian style."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Berliner Weisse",
+            "description": "A sour and low-alcohol ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 3,
+            "max_ibu": 8,
+            "min_srm": 2,
+            "max_srm": 4,
+            "min_abv": 2.8,
+            "max_abv": 3.8,
+            "flavor_profile": "Tart and refreshing",
+            "history": "Known for its tartness and often served with flavored syrups in Berlin, Germany."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Brett Beer",
+            "description": "A wild ale with Brettanomyces",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 10,
+            "max_ibu": 30,
+            "min_srm": 4,
+            "max_srm": 12,
+            "min_abv": 4.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Funky and complex",
+            "history": "Fermented with Brettanomyces yeast, offering unique funkiness and complexity."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Faro",
+            "description": "A sweet and sour Belgian ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 5,
+            "max_ibu": 15,
+            "min_srm": 4,
+            "max_srm": 12,
+            "min_abv": 3.5,
+            "max_abv": 5.0,
+            "flavor_profile": "Sweet and tart",
+            "history": "Typically made by blending young and old lambics, resulting in a sweet-tart profile."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Flanders Oud Bruin",
+            "description": "A tart and malty Belgian ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 12,
+            "max_srm": 22,
+            "min_abv": 4.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Tart and fruity",
+            "history": "Known for its deep brown color and complex blend of tartness and maltiness."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Flanders Red Ale",
+            "description": "A sour and fruity Belgian ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 15,
+            "max_ibu": 25,
+            "min_srm": 10,
+            "max_srm": 16,
+            "min_abv": 4.6,
+            "max_abv": 6.5,
+            "flavor_profile": "Sour and complex",
+            "history": "A Belgian ale aged in oak barrels, offering a tart and fruity character."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Fruit Lambic",
+            "description": "A fruity and wild Belgian ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 5,
+            "max_ibu": 10,
+            "min_srm": 3,
+            "max_srm": 7,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Fruity and complex",
+            "history": "Made with real fruit, it's known for its fruity flavors and spontaneous fermentation."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Fruited Kettle Sour",
+            "description": "A sour ale with added fruit",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 5,
+            "max_ibu": 15,
+            "min_srm": 3,
+            "max_srm": 8,
+            "min_abv": 4.0,
+            "max_abv": 7.0,
+            "flavor_profile": "Tart and fruity",
+            "history": "Typically soured in the kettle and then fruited for a fruity and sour combination."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Gose",
+            "description": "A sour and salty German ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 5,
+            "max_ibu": 12,
+            "min_srm": 3,
+            "max_srm": 4,
+            "min_abv": 4.0,
+            "max_abv": 5.2,
+            "flavor_profile": "Salty and tart",
+            "history": "Brewed with coriander and salt, it's a refreshing and slightly salty sour ale."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Gueuze",
+            "description": "A complex and blended Belgian ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 10,
+            "max_ibu": 20,
+            "min_srm": 3,
+            "max_srm": 7,
+            "min_abv": 5.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Tart and effervescent",
+            "history": "A blend of young and old lambics, offering a complex and effervescent experience."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Lambic",
+            "description": "A traditional Belgian sour ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 0,
+            "max_ibu": 10,
+            "min_srm": 3,
+            "max_srm": 7,
+            "min_abv": 4.8,
+            "max_abv": 6.5,
+            "flavor_profile": "Sour and funky",
+            "history": "Spontaneously fermented with wild yeast, it's a base for various sour beer styles."
+        }
+    },
+    {
+        "model": "beerview.BeerStyle",
+        "fields": {
+            "name": "Wild Ale",
+            "description": "A wild and untamed ale",
+            "family": "Wild/Sour Beer",
+            "min_ibu": 10,
+            "max_ibu": 40,
+            "min_srm": 5,
+            "max_srm": 20,
+            "min_abv": 4.0,
+            "max_abv": 8.0,
+            "flavor_profile": "Funky and complex",
+            "history": "Made with wild yeast and bacteria, offering a wide range of flavors and aromas."
+        }
+    }
+]
