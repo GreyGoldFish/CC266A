@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -16,4 +16,6 @@ urlpatterns = [
     path('beer/delete/<int:beer_id>/', views.delete_beer, name='delete_beer'),
     path('review/delete/<int:review_id>/', views.delete_review, name='delete_review'),
     path('beer/search/', views.search_beers, name='search_beers'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('register/', views.register, name='register'),
 ]

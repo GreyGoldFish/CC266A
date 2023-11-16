@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 from .models import Beer, BeerStyle, Brewery, Review
-from .forms import ReviewForm, BeerForm, BreweryForm
+from .forms import ReviewForm, BeerForm, BreweryForm, RegisterForm
 
 def index(request):
     beers = Beer.objects.all()
@@ -45,6 +46,7 @@ def brewery_details(request, brewery_id):
 
     return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers})
 
+@login_required
 def add_brewery(request):
     if request.method == "POST":
         form = BreweryForm(request.POST)
@@ -95,12 +97,14 @@ def beer_details(request, beer_id):
 
     return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews, 'form': form})
 
+@login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
     beer_id = review.beer.id
     review.delete()
     return redirect('beer_details', beer_id=beer_id)
 
+@login_required
 def add_beer(request):
     if request.method == "POST":
         form = BeerForm(request.POST)
@@ -111,6 +115,7 @@ def add_beer(request):
         form = BeerForm()
     return render(request, 'beerview/beer_form.html', {'form': form})
 
+@login_required
 def update_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
     if request.method == "POST":
@@ -122,7 +127,18 @@ def update_beer(request, beer_id):
         form = BeerForm(instance=beer)
     return render(request, 'beerview/beer_form.html', {'form': form, 'beer': beer})
 
+@login_required
 def delete_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
     beer.delete()
     return redirect('index')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')  # Redirect to login page after successful registration
+    else:
+        form = RegisterForm()
+    return render(request, 'registration/register.html', {'form': form})
