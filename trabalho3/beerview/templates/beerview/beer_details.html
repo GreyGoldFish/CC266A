@@ -8,7 +8,16 @@
         <img src="{{ beer.picture.url }}" alt="{{ beer.name }}" style="max-width: 300px; height: auto;">
     </div>
     {% endif %}
-    <h2 class="text-center mb-4">Reviews for {{ beer.name }}</h2>
+
+    <h2 class="text-center mb-4">{{ beer.name }}</h2>
+
+    <!-- Display Brewery and User -->
+    <div class="text-center mt-3">
+        <h4>Brewery: <a href="{% url 'brewery_details' beer.brewery.id %}">{{ beer.brewery.name }}</a></h4>
+        <p>Added by: {{ beer.user.username }}</p>
+    </div>
+
+    <h3 class="text-center mt-4">Reviews</h3>
     {% for review in reviews %}
         <div class="card mb-3">
             <div class="card-body">
