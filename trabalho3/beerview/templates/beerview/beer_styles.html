@@ -11,7 +11,7 @@
                     <h3>{{ family_name }}</h3>
                     <div class="list-group list-group-flush mb-4">
                         {% for beer_style in beer_styles %}
-                            {% if beer_style.family == family_name %}
+                            {% if beer_style.family == family_code %}
                                 <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">{{ beer_style.name }}</a>
                             {% endif %}
                         {% endfor %}

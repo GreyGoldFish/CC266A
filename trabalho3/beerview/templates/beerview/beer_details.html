@@ -10,10 +10,11 @@
     {% endif %}
 
     <h2 class="text-center mb-4">{{ beer.name }}</h2>
+    <p class="text-center">{{ beer.description }}</p>
 
-    <!-- Display Brewery and User -->
     <div class="text-center mt-3">
         <h4>Brewery: <a href="{% url 'brewery_details' beer.brewery.id %}">{{ beer.brewery.name }}</a></h4>
+        <h4>Style: <a href="{% url 'beer_style_details' beer.style.id %}">{{ beer.style.name }}</a></h4>
         <p>Added by: {{ beer.user.username }}</p>
     </div>
 
@@ -33,14 +34,20 @@
             </div>
         </div>
     {% endfor %}
-    <div class="mt-4">
-        <h3>Add a Review</h3>
-        <form method="post" class="mt-3">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            {% bootstrap_button button_type="submit" content="Submit Review" %}
-        </form>
-    </div>
+    {% if request.user.is_authenticated %}
+        <div class="mt-4">
+            <h3>Add a Review</h3>
+            <form method="post" class="mt-3">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% bootstrap_button button_type="submit" content="Submit Review" %}
+            </form>
+        </div>
+    {% else %}
+        <div class="mt-4 text-center">
+            <p><a href="{% url 'login' %}">Log in</a> to add a review.</p>
+        </div>
+    {% endif %}
     {% if request.user == beer.user or request.user.is_superuser %}
         <div class="mt-3">
             <form method="post" action="{% url 'delete_beer' beer.id %}">

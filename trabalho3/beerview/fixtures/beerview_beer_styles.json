@@ -4,7 +4,7 @@
         "fields": {
             "name": "Bock",
             "description": "A strong, malty lager",
-            "family": "Bock",
+            "family": "BO",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 12,
@@ -20,7 +20,7 @@
         "fields": {
             "name": "Doppelbock",
             "description": "A stronger version of Bock",
-            "family": "Bock",
+            "family": "BO",
             "min_ibu": 25,
             "max_ibu": 35,
             "min_srm": 15,
@@ -36,7 +36,7 @@
         "fields": {
             "name": "Eisbock",
             "description": "A Bock beer that's been frozen",
-            "family": "Bock",
+            "family": "BO",
             "min_ibu": 30,
             "max_ibu": 40,
             "min_srm": 18,
@@ -52,7 +52,7 @@
         "fields": {
             "name": "Maibock",
             "description": "A pale and hoppy Bock",
-            "family": "Bock",
+            "family": "BO",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 10,
@@ -68,7 +68,7 @@
         "fields": {
             "name": "Weizenbock",
             "description": "A wheat-based Bock",
-            "family": "Bock",
+            "family": "BO",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 8,
@@ -84,7 +84,7 @@
         "fields": {
             "name": "Altbier",
             "description": "A German-style ale",
-            "family": "Brown Ale",
+            "family": "BA",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 12,
@@ -100,7 +100,7 @@
         "fields": {
             "name": "American Brown Ale",
             "description": "A hoppy brown ale",
-            "family": "Brown Ale",
+            "family": "BA",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 15,
@@ -116,7 +116,7 @@
         "fields": {
             "name": "Belgian Dark Ale",
             "description": "A Belgian-style dark ale",
-            "family": "Brown Ale",
+            "family": "BA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 12,
@@ -132,7 +132,7 @@
         "fields": {
             "name": "English Brown Ale",
             "description": "A classic English ale",
-            "family": "Brown Ale",
+            "family": "BA",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 12,
@@ -148,7 +148,7 @@
         "fields": {
             "name": "English Dark Mild Ale",
             "description": "A mild and dark ale",
-            "family": "Brown Ale",
+            "family": "BA",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 10,
@@ -164,7 +164,7 @@
         "fields": {
             "name": "Dubbel",
             "description": "A strong Belgian ale",
-            "family": "Dark Ale",
+            "family": "DA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 15,
@@ -180,7 +180,7 @@
         "fields": {
             "name": "Roggenbier",
             "description": "A German rye beer",
-            "family": "Dark Ale",
+            "family": "DA",
             "min_ibu": 15,
             "max_ibu": 30,
             "min_srm": 8,
@@ -196,7 +196,7 @@
         "fields": {
             "name": "Scottish Ale",
             "description": "A malty Scottish ale",
-            "family": "Dark Ale",
+            "family": "DA",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 10,
@@ -212,7 +212,7 @@
         "fields": {
             "name": "Winter Warmer",
             "description": "A spiced winter ale",
-            "family": "Dark Ale",
+            "family": "DA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 10,
@@ -228,7 +228,7 @@
         "fields": {
             "name": "American Amber / Red Lager",
             "description": "A hoppy amber lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 10,
@@ -244,7 +244,7 @@
         "fields": {
             "name": "Czech Amber Lager",
             "description": "A Czech amber lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 10,
@@ -260,7 +260,7 @@
         "fields": {
             "name": "Czech Dark Lager",
             "description": "A dark Czech lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 12,
@@ -276,7 +276,7 @@
         "fields": {
             "name": "European Dark Lager",
             "description": "A European-style dark lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 18,
             "max_ibu": 30,
             "min_srm": 10,
@@ -292,7 +292,7 @@
         "fields": {
             "name": "M\u00e4rzen",
             "description": "A traditional German lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 20,
             "max_ibu": 28,
             "min_srm": 6,
@@ -308,7 +308,7 @@
         "fields": {
             "name": "Munich Dunkel",
             "description": "A dark Bavarian lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 18,
             "max_ibu": 28,
             "min_srm": 10,
@@ -324,7 +324,7 @@
         "fields": {
             "name": "Rauchbier",
             "description": "A smoked German lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 12,
@@ -340,7 +340,7 @@
         "fields": {
             "name": "Schwarzbier",
             "description": "A German black lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 17,
@@ -356,7 +356,7 @@
         "fields": {
             "name": "Vienna Lager",
             "description": "A Vienna-style lager",
-            "family": "Dark Lager",
+            "family": "DL",
             "min_ibu": 18,
             "max_ibu": 30,
             "min_srm": 10,
@@ -372,7 +372,7 @@
         "fields": {
             "name": "Bi\u00e8re de Champagne / Bi\u00e8re Brut",
             "description": "Champagne-style beer",
-            "family": "Hybrid Beer",
+            "family": "HY",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 4,
@@ -388,7 +388,7 @@
         "fields": {
             "name": "Braggot",
             "description": "A mead and beer hybrid",
-            "family": "Hybrid Beer",
+            "family": "HY",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 8,
@@ -404,7 +404,7 @@
         "fields": {
             "name": "California Common / Steam Beer",
             "description": "A unique American style",
-            "family": "Hybrid Beer",
+            "family": "HY",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 10,
@@ -420,7 +420,7 @@
         "fields": {
             "name": "Cream Ale",
             "description": "A light and creamy ale",
-            "family": "Hybrid Beer",
+            "family": "HY",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 3,
@@ -436,7 +436,7 @@
         "fields": {
             "name": "American IPA",
             "description": "A hop-forward American ale",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 40,
             "max_ibu": 70,
             "min_srm": 6,
@@ -452,7 +452,7 @@
         "fields": {
             "name": "Belgian IPA",
             "description": "A Belgian-style hoppy ale",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 6,
@@ -468,7 +468,7 @@
         "fields": {
             "name": "Black IPA",
             "description": "A dark and hoppy ale",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 40,
             "max_ibu": 70,
             "min_srm": 15,
@@ -484,7 +484,7 @@
         "fields": {
             "name": "Brut IPA",
             "description": "A champagne-like IPA",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 40,
             "max_ibu": 70,
             "min_srm": 3,
@@ -500,7 +500,7 @@
         "fields": {
             "name": "English IPA",
             "description": "A balanced British IPA",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 35,
             "max_ibu": 55,
             "min_srm": 6,
@@ -516,7 +516,7 @@
         "fields": {
             "name": "Imperial IPA",
             "description": "A strong and hoppy ale",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 60,
             "max_ibu": 100,
             "min_srm": 8,
@@ -532,7 +532,7 @@
         "fields": {
             "name": "Milkshake IPA",
             "description": "A creamy and fruity IPA",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 6,
@@ -548,7 +548,7 @@
         "fields": {
             "name": "New England IPA",
             "description": "A hazy and juicy IPA",
-            "family": "India Pale Ale",
+            "family": "IP",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 4,
@@ -564,7 +564,7 @@
         "fields": {
             "name": "American Amber / Red Ale",
             "description": "A malt-forward American ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 10,
@@ -580,7 +580,7 @@
         "fields": {
             "name": "American Blonde Ale",
             "description": "A light and approachable ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 3,
@@ -596,7 +596,7 @@
         "fields": {
             "name": "American Pale Ale",
             "description": "A hoppy and refreshing ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 5,
@@ -612,7 +612,7 @@
         "fields": {
             "name": "Belgian Blonde Ale",
             "description": "A Belgian-style blonde ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 3,
@@ -628,7 +628,7 @@
         "fields": {
             "name": "Belgian Pale Ale",
             "description": "A Belgian-style pale ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 6,
@@ -644,7 +644,7 @@
         "fields": {
             "name": "Bi\u00e8re de Garde",
             "description": "A French farmhouse ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 18,
             "max_ibu": 28,
             "min_srm": 6,
@@ -660,7 +660,7 @@
         "fields": {
             "name": "English Bitter",
             "description": "A sessionable British ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 5,
@@ -676,7 +676,7 @@
         "fields": {
             "name": "English Pale Ale",
             "description": "A classic British ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 6,
@@ -692,7 +692,7 @@
         "fields": {
             "name": "English Pale Mild Ale",
             "description": "A low-alcohol British ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 10,
             "max_ibu": 25,
             "min_srm": 8,
@@ -708,7 +708,7 @@
         "fields": {
             "name": "Extra Special / Strong Bitter (ESB)",
             "description": "A strong British ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 8,
@@ -724,7 +724,7 @@
         "fields": {
             "name": "Grisette",
             "description": "A light and rustic Belgian ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 15,
             "max_ibu": 30,
             "min_srm": 3,
@@ -740,7 +740,7 @@
         "fields": {
             "name": "Irish Red Ale",
             "description": "A malt-focused Irish ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 17,
             "max_ibu": 28,
             "min_srm": 9,
@@ -756,7 +756,7 @@
         "fields": {
             "name": "K\u00f6lsch",
             "description": "A clean and crisp German ale",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 3,
@@ -772,7 +772,7 @@
         "fields": {
             "name": "Saison",
             "description": "A farmhouse ale with a twist",
-            "family": "Pale Ale",
+            "family": "PA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 4,
@@ -788,7 +788,7 @@
         "fields": {
             "name": "American Adjunct Lager",
             "description": "An American-style light lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 8,
             "max_ibu": 18,
             "min_srm": 2,
@@ -804,7 +804,7 @@
         "fields": {
             "name": "American Lager",
             "description": "A classic American lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 10,
             "max_ibu": 20,
             "min_srm": 2,
@@ -820,7 +820,7 @@
         "fields": {
             "name": "Bohemian / Czech Pilsner",
             "description": "A Czech-style pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 3,
@@ -836,7 +836,7 @@
         "fields": {
             "name": "Czech Pale Lager",
             "description": "A Czech pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 4,
@@ -852,7 +852,7 @@
         "fields": {
             "name": "European / Dortmunder Export Lager",
             "description": "A European pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 4,
@@ -868,7 +868,7 @@
         "fields": {
             "name": "European Pale Lager",
             "description": "A European-style pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 3,
@@ -884,7 +884,7 @@
         "fields": {
             "name": "European Strong Lager",
             "description": "A strong European lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 4,
@@ -900,7 +900,7 @@
         "fields": {
             "name": "Festbier / Wiesnbier",
             "description": "A traditional German festival lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 20,
             "max_ibu": 30,
             "min_srm": 5,
@@ -916,7 +916,7 @@
         "fields": {
             "name": "German Pilsner",
             "description": "A classic German pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 25,
             "max_ibu": 45,
             "min_srm": 2,
@@ -932,7 +932,7 @@
         "fields": {
             "name": "Helles",
             "description": "A German-style pale lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 18,
             "max_ibu": 25,
             "min_srm": 3,
@@ -948,7 +948,7 @@
         "fields": {
             "name": "Imperial Pilsner",
             "description": "A strong and hoppy pilsner",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 45,
             "max_ibu": 60,
             "min_srm": 4,
@@ -964,7 +964,7 @@
         "fields": {
             "name": "India Pale Lager (IPL)",
             "description": "A lager with IPA characteristics",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 40,
             "max_ibu": 70,
             "min_srm": 6,
@@ -980,7 +980,7 @@
         "fields": {
             "name": "Kellerbier / Zwickelbier",
             "description": "An unfiltered German lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 4,
@@ -996,7 +996,7 @@
         "fields": {
             "name": "Light Lager",
             "description": "A light and low-calorie lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 8,
             "max_ibu": 15,
             "min_srm": 2,
@@ -1012,7 +1012,7 @@
         "fields": {
             "name": "Malt Liquor",
             "description": "A high-alcohol lager",
-            "family": "Pale Lager",
+            "family": "PL",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 3,
@@ -1028,7 +1028,7 @@
         "fields": {
             "name": "American Porter",
             "description": "A dark and roasty ale",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 25,
             "max_ibu": 40,
             "min_srm": 20,
@@ -1044,7 +1044,7 @@
         "fields": {
             "name": "Baltic Porter",
             "description": "A strong and dark lager",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 30,
             "max_ibu": 45,
             "min_srm": 17,
@@ -1060,7 +1060,7 @@
         "fields": {
             "name": "English Porter",
             "description": "A classic English dark ale",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 20,
@@ -1076,7 +1076,7 @@
         "fields": {
             "name": "Imperial Porter",
             "description": "A strong and robust ale",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 40,
             "max_ibu": 60,
             "min_srm": 25,
@@ -1092,7 +1092,7 @@
         "fields": {
             "name": "Robust Porter",
             "description": "A dark and hearty ale",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 25,
             "max_ibu": 50,
             "min_srm": 20,
@@ -1108,7 +1108,7 @@
         "fields": {
             "name": "Smoked Porter",
             "description": "A smoked dark ale",
-            "family": "Porter",
+            "family": "PO",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 20,
@@ -1124,7 +1124,7 @@
         "fields": {
             "name": "Chile Beer",
             "description": "A spicy and flavorful beer",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 4,
@@ -1140,7 +1140,7 @@
         "fields": {
             "name": "Fruit and Field Beer",
             "description": "A beer with added fruits",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 25,
             "min_srm": 3,
@@ -1156,7 +1156,7 @@
         "fields": {
             "name": "Gruit / Ancient Herbed Ale",
             "description": "A historic herbal ale",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 20,
             "min_srm": 3,
@@ -1172,7 +1172,7 @@
         "fields": {
             "name": "Happoshu",
             "description": "A low-malt Japanese beer",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 20,
             "min_srm": 4,
@@ -1188,7 +1188,7 @@
         "fields": {
             "name": "Herb and Spice Beer",
             "description": "A beer with added herbs",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 10,
             "max_ibu": 30,
             "min_srm": 4,
@@ -1204,7 +1204,7 @@
         "fields": {
             "name": "Japanese Rice Lager",
             "description": "A rice-based Japanese lager",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 10,
             "max_ibu": 20,
             "min_srm": 2,
@@ -1220,7 +1220,7 @@
         "fields": {
             "name": "Kvass",
             "description": "A Russian bread beer",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 20,
             "min_srm": 5,
@@ -1236,7 +1236,7 @@
         "fields": {
             "name": "Low-Alcohol Beer",
             "description": "A beer with low alcohol",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 20,
             "min_srm": 2,
@@ -1252,7 +1252,7 @@
         "fields": {
             "name": "Pumpkin Beer",
             "description": "A beer with pumpkin spices",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 25,
             "min_srm": 5,
@@ -1268,7 +1268,7 @@
         "fields": {
             "name": "Rye Beer",
             "description": "A beer with rye malt",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 15,
             "max_ibu": 40,
             "min_srm": 5,
@@ -1284,7 +1284,7 @@
         "fields": {
             "name": "Sahti",
             "description": "A traditional Finnish ale",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 5,
             "max_ibu": 15,
             "min_srm": 5,
@@ -1300,7 +1300,7 @@
         "fields": {
             "name": "Smoked Beer",
             "description": "A beer with smoked malt",
-            "family": "Specialty Beer",
+            "family": "SP",
             "min_ibu": 15,
             "max_ibu": 30,
             "min_srm": 8,
@@ -1316,7 +1316,7 @@
         "fields": {
             "name": "American Imperial Stout",
             "description": "A strong and dark ale",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 50,
             "max_ibu": 100,
             "min_srm": 40,
@@ -1332,7 +1332,7 @@
         "fields": {
             "name": "American Stout",
             "description": "A bold and flavorful ale",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 35,
             "max_ibu": 75,
             "min_srm": 40,
@@ -1348,7 +1348,7 @@
         "fields": {
             "name": "English Stout",
             "description": "A classic British stout",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 25,
             "max_ibu": 45,
             "min_srm": 40,
@@ -1364,7 +1364,7 @@
         "fields": {
             "name": "Foreign / Export Stout",
             "description": "A robust and dark ale",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 40,
@@ -1380,7 +1380,7 @@
         "fields": {
             "name": "Irish Dry Stout",
             "description": "A dry and sessionable stout",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 30,
             "max_ibu": 40,
             "min_srm": 25,
@@ -1396,7 +1396,7 @@
         "fields": {
             "name": "Oatmeal Stout",
             "description": "A creamy and smooth stout",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 20,
@@ -1412,7 +1412,7 @@
         "fields": {
             "name": "Russian Imperial Stout",
             "description": "A strong and rich stout",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 50,
             "max_ibu": 90,
             "min_srm": 40,
@@ -1428,7 +1428,7 @@
         "fields": {
             "name": "Sweet / Milk Stout",
             "description": "A sweet and creamy stout",
-            "family": "Stout",
+            "family": "ST",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 25,
@@ -1444,7 +1444,7 @@
         "fields": {
             "name": "American Barleywine",
             "description": "A strong and hoppy ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 50,
             "max_ibu": 100,
             "min_srm": 10,
@@ -1460,7 +1460,7 @@
         "fields": {
             "name": "American Strong Ale",
             "description": "A bold and flavorful ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 50,
             "max_ibu": 85,
             "min_srm": 10,
@@ -1476,7 +1476,7 @@
         "fields": {
             "name": "Belgian Dark Strong Ale",
             "description": "A complex and strong ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 20,
             "max_ibu": 50,
             "min_srm": 12,
@@ -1492,7 +1492,7 @@
         "fields": {
             "name": "Belgian Pale Strong Ale",
             "description": "A fruity and balanced ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 20,
             "max_ibu": 50,
             "min_srm": 4,
@@ -1508,7 +1508,7 @@
         "fields": {
             "name": "English Barleywine",
             "description": "A rich and malty British ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 35,
             "max_ibu": 70,
             "min_srm": 8,
@@ -1524,7 +1524,7 @@
         "fields": {
             "name": "English Strong Ale",
             "description": "A strong and balanced ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 10,
@@ -1540,7 +1540,7 @@
         "fields": {
             "name": "Imperial Red Ale",
             "description": "A bold and hoppy ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 50,
             "max_ibu": 90,
             "min_srm": 10,
@@ -1556,7 +1556,7 @@
         "fields": {
             "name": "Old Ale",
             "description": "A rich and aged British ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 30,
             "max_ibu": 60,
             "min_srm": 10,
@@ -1572,7 +1572,7 @@
         "fields": {
             "name": "Quadrupel (Quad)",
             "description": "A strong and complex ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 25,
             "max_ibu": 50,
             "min_srm": 12,
@@ -1588,7 +1588,7 @@
         "fields": {
             "name": "Scotch Ale / Wee Heavy",
             "description": "A strong and malty Scottish ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 10,
@@ -1604,7 +1604,7 @@
         "fields": {
             "name": "Tripel",
             "description": "A strong and fruity Belgian ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 20,
             "max_ibu": 45,
             "min_srm": 4,
@@ -1620,7 +1620,7 @@
         "fields": {
             "name": "Wheatwine",
             "description": "A wheat-based strong ale",
-            "family": "Strong Ale",
+            "family": "SA",
             "min_ibu": 30,
             "max_ibu": 50,
             "min_srm": 6,
@@ -1636,7 +1636,7 @@
         "fields": {
             "name": "American Dark Wheat Beer",
             "description": "A dark and wheaty ale",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 15,
             "max_ibu": 30,
             "min_srm": 20,
@@ -1652,7 +1652,7 @@
         "fields": {
             "name": "American Pale Wheat Beer",
             "description": "A hoppy and wheaty ale",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 20,
             "max_ibu": 40,
             "min_srm": 4,
@@ -1668,7 +1668,7 @@
         "fields": {
             "name": "Dunkelweizen",
             "description": "A dark and wheaty German ale",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 10,
             "max_ibu": 20,
             "min_srm": 12,
@@ -1684,7 +1684,7 @@
         "fields": {
             "name": "Grodziskie",
             "description": "A light and smoky Polish ale",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 20,
             "max_ibu": 35,
             "min_srm": 3,
@@ -1700,7 +1700,7 @@
         "fields": {
             "name": "Hefeweizen",
             "description": "A classic German wheat beer",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 10,
             "max_ibu": 15,
             "min_srm": 3,
@@ -1716,7 +1716,7 @@
         "fields": {
             "name": "Kristallweizen",
             "description": "A clear and filtered wheat ale",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 10,
             "max_ibu": 15,
             "min_srm": 3,
@@ -1732,7 +1732,7 @@
         "fields": {
             "name": "Witbier",
             "description": "A Belgian-style wheat beer",
-            "family": "Wheat Beer",
+            "family": "WH",
             "min_ibu": 10,
             "max_ibu": 20,
             "min_srm": 2,
@@ -1748,7 +1748,7 @@
         "fields": {
             "name": "Berliner Weisse",
             "description": "A sour and low-alcohol ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 3,
             "max_ibu": 8,
             "min_srm": 2,
@@ -1764,7 +1764,7 @@
         "fields": {
             "name": "Brett Beer",
             "description": "A wild ale with Brettanomyces",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 10,
             "max_ibu": 30,
             "min_srm": 4,
@@ -1780,7 +1780,7 @@
         "fields": {
             "name": "Faro",
             "description": "A sweet and sour Belgian ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 5,
             "max_ibu": 15,
             "min_srm": 4,
@@ -1796,7 +1796,7 @@
         "fields": {
             "name": "Flanders Oud Bruin",
             "description": "A tart and malty Belgian ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 12,
@@ -1812,7 +1812,7 @@
         "fields": {
             "name": "Flanders Red Ale",
             "description": "A sour and fruity Belgian ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 15,
             "max_ibu": 25,
             "min_srm": 10,
@@ -1828,7 +1828,7 @@
         "fields": {
             "name": "Fruit Lambic",
             "description": "A fruity and wild Belgian ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 5,
             "max_ibu": 10,
             "min_srm": 3,
@@ -1844,7 +1844,7 @@
         "fields": {
             "name": "Fruited Kettle Sour",
             "description": "A sour ale with added fruit",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 5,
             "max_ibu": 15,
             "min_srm": 3,
@@ -1860,7 +1860,7 @@
         "fields": {
             "name": "Gose",
             "description": "A sour and salty German ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 5,
             "max_ibu": 12,
             "min_srm": 3,
@@ -1876,7 +1876,7 @@
         "fields": {
             "name": "Gueuze",
             "description": "A complex and blended Belgian ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 10,
             "max_ibu": 20,
             "min_srm": 3,
@@ -1892,7 +1892,7 @@
         "fields": {
             "name": "Lambic",
             "description": "A traditional Belgian sour ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 0,
             "max_ibu": 10,
             "min_srm": 3,
@@ -1908,7 +1908,7 @@
         "fields": {
             "name": "Wild Ale",
             "description": "A wild and untamed ale",
-            "family": "Wild/Sour Beer",
+            "family": "WS",
             "min_ibu": 10,
             "max_ibu": 40,
             "min_srm": 5,

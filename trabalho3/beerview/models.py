@@ -11,16 +11,17 @@ class BeerStyle(models.Model):
         ('BO', 'Bock'),
         ('BA', 'Brown Ale'),
         ('DA', 'Dark Ale'),
+        ('DL', 'Dark Lager'),
         ('HY', 'Hybrid Beer'),
         ('IP', 'India Pale Ale'),
         ('PA', 'Pale Ale'),
         ('PL', 'Pale Lager'),
         ('PO', 'Porter'),
-        ('ES', 'Specialty Beer'),
+        ('SP', 'Specialty Beer'),
         ('ST', 'Stout'),
         ('SA', 'Strong Ale'),
         ('WH', 'Wheat Beer'),
-        ('WI', 'Wild/Sour Beer'),
+        ('WS', 'Wild/Sour Beer'),
     ]
 
     name = models.CharField(
@@ -111,7 +112,7 @@ class Address(models.Model):
 
 class Brewery(models.Model):
     name = models.CharField(max_length=255)
-    picture = models.ImageField(upload_to='breweries/pictures/')
+    picture = models.ImageField(upload_to='brewery_pictures/')
     address = models.OneToOneField(
         Address,
         on_delete=models.CASCADE
@@ -130,7 +131,7 @@ class Brewery(models.Model):
 
 class Beer(models.Model):
     name = models.CharField(max_length=200)
-    picture = models.ImageField(upload_to='beers/pictures/')
+    picture = models.ImageField(upload_to='beer_pictures/')
     brewery = models.ForeignKey(
         Brewery,
         on_delete=models.CASCADE,

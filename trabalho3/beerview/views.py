@@ -36,10 +36,10 @@ def breweries(request):
 def search_breweries(request):
     query = request.GET.get('q')
     if query:
-        breweries = Brewery.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
+        breweries = Brewery.objects.filter(Q(name__icontains=query))
     else:
         breweries = Brewery.objects.all()
-    return render(request, 'beerview/brewery.html', {'breweries': breweries})
+    return render(request, 'beerview/breweries.html', {'breweries': breweries})
 
 def brewery_details(request, brewery_id):
     brewery = get_object_or_404(Brewery, pk=brewery_id)
