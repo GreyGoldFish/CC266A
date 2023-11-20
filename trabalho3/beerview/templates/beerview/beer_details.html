@@ -3,9 +3,9 @@
 
 {% block content %}
 <div class="py-5">
-    {% if beer.image %}
+    {% if beer.picture %}
     <div class="text-center">
-        <img src="{{ beer.image.url }}" alt="{{ beer.name }}" style="max-width: 300px; height: auto;">
+        <img src="{{ beer.picture.url }}" alt="{{ beer.name }}" style="max-width: 300px; height: auto;">
     </div>
     {% endif %}
     <h2 class="text-center mb-4">Reviews for {{ beer.name }}</h2>

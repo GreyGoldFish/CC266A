@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from .models import Beer, BeerStyle, Brewery, Review
+from .models import Beer, BeerStyle, Brewery, Review, Address
 from .forms import ReviewForm, BeerForm, BreweryForm, RegisterForm
 
 def index(request):
@@ -52,10 +52,23 @@ def add_brewery(request):
     if request.method == "POST":
         form = BreweryForm(request.POST, request.FILES)
         if form.is_valid():
+            # Create Address instance
+            address = Address(
+                line1=form.cleaned_data['line1'],
+                line2=form.cleaned_data['line2'],
+                city=form.cleaned_data['city'],
+                region=form.cleaned_data['region'],
+                postal_code=form.cleaned_data['postal_code'],
+                country=form.cleaned_data['country']
+            )
+            address.save()
+
+            # Create Brewery instance
             brewery = form.save(commit=False)
-            brewery.user = request.user  # Set the creator to the current user
+            brewery.address = address  # Associate Address with Brewery
+            brewery.user = request.user  # Set the user
             brewery.save()
-            messages.success(request, "New brewery added successfully.")
+
             return redirect('breweries')
     else:
         form = BreweryForm()
