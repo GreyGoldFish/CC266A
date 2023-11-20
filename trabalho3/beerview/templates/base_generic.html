@@ -1,4 +1,4 @@
-{% load django_bootstrap5 %}
+{% load static django_bootstrap5 %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,7 @@
     <title>{% block title %}Beerview{% endblock %}</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 <body>
 

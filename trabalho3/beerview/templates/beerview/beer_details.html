@@ -13,8 +13,8 @@
     <p class="text-center">{{ beer.description }}</p>
 
     <div class="text-center mt-3">
-        <h4>Brewery: <a href="{% url 'brewery_details' beer.brewery.id %}">{{ beer.brewery.name }}</a></h4>
-        <h4>Style: <a href="{% url 'beer_style_details' beer.style.id %}">{{ beer.style.name }}</a></h4>
+        <h5>Brewery: <a href="{% url 'brewery_details' beer.brewery.id %}">{{ beer.brewery.name }}</a></h4>
+        <h5>Style: <a href="{% url 'beer_style_details' beer.style.id %}">{{ beer.style.name }}</a></h4>
         <p>Added by: {{ beer.user.username }}</p>
     </div>
 
