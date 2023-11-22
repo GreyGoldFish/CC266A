@@ -3,12 +3,12 @@ from .models import BeerStyle, Beer, Review, Address, Brewery
 
 class ReviewInline(admin.TabularInline):
     model = Review
-    extra = 1  # Quantas linhas para adicionar avaliações serão mostradas
+    extra = 1
 
 class BeerAdmin(admin.ModelAdmin):
-    list_display = ('name', 'brewery', 'style', 'abv')  # Campos que aparecem na listagem
-    list_filter = ('style', 'brewery')  # Filtros disponíveis na barra lateral
-    search_fields = ('name', 'brewery_name')  # Campos pesquisáveis
+    list_display = ('name', 'brewery', 'style', 'abv')
+    list_filter = ('style', 'brewery')
+    search_fields = ('name', 'brewery_name')
     inlines = [ReviewInline]
 
 class ReviewAdmin(admin.ModelAdmin):

@@ -52,7 +52,6 @@ def add_brewery(request):
     if request.method == "POST":
         form = BreweryForm(request.POST, request.FILES)
         if form.is_valid():
-            # Create Address instance
             address = Address(
                 line1=form.cleaned_data['line1'],
                 line2=form.cleaned_data['line2'],
@@ -63,10 +62,9 @@ def add_brewery(request):
             )
             address.save()
 
-            # Create Brewery instance
             brewery = form.save(commit=False)
-            brewery.address = address  # Associate Address with Brewery
-            brewery.user = request.user  # Set the user
+            brewery.address = address
+            brewery.user = request.user
             brewery.save()
 
             return redirect('breweries')
@@ -78,7 +76,6 @@ def add_brewery(request):
 def delete_brewery(request, brewery_id):
     brewery = get_object_or_404(Brewery, id=brewery_id)
 
-    # Check if the current user is the creator of the brewery
     if request.user == brewery.creator:
         brewery.delete()
         messages.success(request, "Brewery successfully deleted.")
@@ -119,7 +116,7 @@ def beer_details(request, beer_id):
         if form.is_valid():
             review = form.save(commit=False)
             review.beer = beer
-            review.user = request.user  # Assuming the user is authenticated
+            review.user = request.user
             review.save()
             return redirect('beer_details', beer_id=beer.id)
     else:
@@ -131,7 +128,6 @@ def beer_details(request, beer_id):
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
-    # Check if the current user is the user of the review
     if request.user == review.user:
         review.delete()
         messages.success(request, "Review successfully deleted.")
@@ -153,7 +149,6 @@ def add_beer(request):
         form = BeerForm()
     return render(request, 'beerview/beer_form.html', {'form': form})
 
-
 @login_required
 def update_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
@@ -170,7 +165,6 @@ def update_beer(request, beer_id):
 def delete_beer(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
 
-    # Check if the current user is the user of the beer
     if request.user == beer.user:
         beer.delete()
         messages.success(request, "Beer successfully deleted.")
@@ -184,7 +178,7 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redirect to login page after successful registration
+            return redirect('login')
     else:
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})

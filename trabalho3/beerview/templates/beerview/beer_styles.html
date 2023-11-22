@@ -7,7 +7,7 @@
     <div class="row">
         {% if beer_styles %}
             {% for family_code, family_name in beer_styles.model.FAMILIES %}
-                <div class="col-md-4"> <!-- Adjust the column size as needed -->
+                <div class="col-md-4">
                     <h3>{{ family_name }}</h3>
                     <div class="list-group list-group-flush mb-4">
                         {% for beer_style in beer_styles %}

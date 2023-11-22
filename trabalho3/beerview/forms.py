@@ -13,12 +13,12 @@ class ReviewForm(forms.ModelForm):
                 'step': '0.1', 
                 'min': '0', 
                 'max': '5', 
-                'class': 'form-control',  # Bootstrap class
+                'class': 'form-control',  # classe Bootstrap
             }),
             'comment': forms.Textarea(attrs={
                 'rows': 4, 
                 'cols': 40, 
-                'class': 'form-control'  # Bootstrap class
+                'class': 'form-control'  # classe Bootstrap
             }),
         }
 
@@ -27,8 +27,6 @@ class ReviewForm(forms.ModelForm):
         if rating < 0 or rating > 5:
             raise forms.ValidationError("Rating must be between 0 and 5.")
         return rating
-
-    # Additional custom validations can be added here
 
 class BeerForm(forms.ModelForm):
     class Meta:
@@ -51,13 +49,9 @@ class BeerForm(forms.ModelForm):
 
     def clean_abv(self):
         abv = self.cleaned_data.get('abv')
-        # Add your custom validation logic for ABV here
         return abv
 
-    # Additional custom validations for 'ibu' and 'srm' can be added here
-
 class BreweryForm(forms.ModelForm):
-    # Adding address fields directly in the form
     line1 = forms.CharField(max_length=255, label="Address Line 1")
     line2 = forms.CharField(max_length=255, required=False, label="Address Line 2")
     city = forms.CharField(max_length=255)
@@ -70,7 +64,7 @@ class BreweryForm(forms.ModelForm):
         fields = ['name', 'picture', 'line1', 'line2', 'city', 'region', 'postal_code', 'country']
 
     def save(self, commit=True):
-        # Overriding the save method to handle address creation
+        # Override o método save para poder criar endereço
         brewery = super().save(commit=False)
         address = Address(
             line1=self.cleaned_data['line1'],
