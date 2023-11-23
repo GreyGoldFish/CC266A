@@ -43,11 +43,9 @@ def create_beer(brewery, beer_style, user, default_image_path):
     max_abv = Decimal(beer_style.max_abv if beer_style.max_abv else 10.0)
     abv = Decimal(str(round(random.uniform(float(beer_style.min_abv or 2.0), float(beer_style.max_abv or 10.0)), 1)))
 
-    # Generate a beer name
     beer_name_parts = [fake.color_name(), fake.word(), "Ale", "Lager", "Stout", "Porter", "IPA"]
     beer_name = ' '.join([random.choice(beer_name_parts) for _ in range(3)]).title()
 
-    # Generate a beer description
     beer_description = fake.paragraph(nb_sentences=3)
 
     beer = Beer.objects.create(
@@ -57,7 +55,7 @@ def create_beer(brewery, beer_style, user, default_image_path):
         abv=abv,
         ibu=random.randint(10, 100),
         srm=random.randint(5, 40),
-        description=beer_description,  # Adding the description here
+        description=beer_description,
         user=user
     )
     if default_image_path:
@@ -80,12 +78,12 @@ def populate_all():
     faker_user = User.objects.get(username='faker')
     beer_styles = BeerStyle.objects.all()
 
-    for _ in range(10):  # Number of breweries to create
+    for _ in range(10):
         brewery = create_brewery(faker_user, brewery_image_dir)
-        for _ in range(5):  # Number of beers per brewery
+        for _ in range(5):
             beer_style = random.choice(beer_styles)
             beer = create_beer(brewery, beer_style, faker_user, beer_image_dir)
-            for _ in range(3):  # Number of reviews per beer
+            for _ in range(3):
                 create_review(beer, faker_user)
 
     print("Fake data generation complete.")

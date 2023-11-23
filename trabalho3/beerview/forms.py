@@ -64,7 +64,7 @@ class BreweryForm(forms.ModelForm):
         fields = ['name', 'picture', 'line1', 'line2', 'city', 'region', 'postal_code', 'country']
 
     def save(self, commit=True):
-        # Override o método save para poder criar endereço
+        # Override o método save para poder criar e salvar o endereço
         brewery = super().save(commit=False)
         address = Address(
             line1=self.cleaned_data['line1'],

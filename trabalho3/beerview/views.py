@@ -24,6 +24,12 @@ def beer_styles(request):
 
     return render(request, "beerview/beer_styles.html", context)
 
+def beer_style_details(request, beer_style_id):
+    beer_style = get_object_or_404(BeerStyle, pk=beer_style_id)
+    beers = beer_style.beers.all()
+
+    return render(request, 'beerview/beer_style_details.html', {'beer_style': beer_style, 'beers': beers})
+
 def breweries(request):
     breweries = Brewery.objects.all()
 
@@ -48,7 +54,7 @@ def brewery_details(request, brewery_id):
     return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers})
 
 @login_required
-def add_brewery(request):
+def create_brewery(request):
     if request.method == "POST":
         form = BreweryForm(request.POST, request.FILES)
         if form.is_valid():
@@ -73,6 +79,18 @@ def add_brewery(request):
     return render(request, 'beerview/brewery_form.html', {'form': form})
 
 @login_required
+def update_brewery(request, brewery_id):
+    brewery = get_object_or_404(Brewery, id=brewery_id)
+    if request.method == "POST":
+        form = BreweryForm(request.POST, instance=brewery)
+        if form.is_valid():
+            form.save()
+            return redirect('brewery_details', brewery_id=brewery.id)
+    else:
+        form = BreweryForm(instance=brewery)
+    return render(request, 'beerview/brewery_form.html', {'form': form, 'brewery': brewery})
+
+@login_required
 def delete_brewery(request, brewery_id):
     brewery = get_object_or_404(Brewery, id=brewery_id)
 
@@ -84,33 +102,11 @@ def delete_brewery(request, brewery_id):
 
     return redirect('breweries')
 
-def beer_styles(request):
-    beer_styles = BeerStyle.objects.all()
-
-    context = {
-        "beer_styles": beer_styles,
-    }
-
-    return render(request, "beerview/beer_styles.html", context)
-
-def beer_style_details(request, beer_style_id):
-    beer_style = get_object_or_404(BeerStyle, pk=beer_style_id)
-    beers = beer_style.beers.all()
-
-    return render(request, 'beerview/beer_style_details.html', {'beer_style': beer_style, 'beers': beers})
-
-def search_beers(request):
-    query = request.GET.get('q')
-    if query:
-        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
-    else:
-        beers = Beer.objects.all()
-    return render(request, 'beerview/index.html', {'beers': beers})
-
 def beer_details(request, beer_id):
     beer = get_object_or_404(Beer, pk=beer_id)
     reviews = beer.reviews.all()
 
+    # As avaliações ficam na página de detalhes da cerveja
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -124,20 +120,16 @@ def beer_details(request, beer_id):
 
     return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews, 'form': form})
 
-@login_required
-def delete_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id)
-
-    if request.user == review.user:
-        review.delete()
-        messages.success(request, "Review successfully deleted.")
+def search_beers(request):
+    query = request.GET.get('q')
+    if query:
+        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
     else:
-        messages.error(request, "You do not have permission to delete this review.")
-
-    return redirect('beer_details', beer_id=review.beer.id)
+        beers = Beer.objects.all()
+    return render(request, 'beerview/index.html', {'beers': beers})
 
 @login_required
-def add_beer(request):
+def create_beer(request):
     if request.method == "POST":
         form = BeerForm(request.POST, request.FILES)
         if form.is_valid():
@@ -168,10 +160,35 @@ def delete_beer(request, beer_id):
     if request.user == beer.user:
         beer.delete()
         messages.success(request, "Beer successfully deleted.")
-    else:
-        messages.error(request, "You do not have permission to delete this beer.")
 
     return redirect('index')
+
+@login_required
+def update_review(request, beer_id):
+    beer = get_object_or_404(Beer, id=beer_id)
+    if request.method == "POST":
+        form = BeerForm(request.POST, instance=beer)
+        if form.is_valid():
+            form.save()
+            return redirect('beer_details', beer_id=beer.id)
+    else:
+        form = BeerForm(instance=beer)
+    return render(request, 'beerview/beer_form.html', {'form': form, 'beer': beer})
+
+
+    
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user == review.user:
+        review.delete()
+        messages.success(request, "Review successfully deleted.")
+    else:
+        messages.error(request, "You do not have permission to delete this review.")
+
+    return redirect('beer_details', beer_id=review.beer.id)
 
 def register(request):
     if request.method == 'POST':

@@ -12,17 +12,25 @@
             </form>
         </div>
     </div>
-    {% if beers %}
-        <div class="list-group">
-        {% for beer in beers %}
-            <a href="{% url 'beer_details' beer.id %}" class="list-group-item list-group-item-action">{{ beer.name }}</a>
-        {% endfor %}
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="overflow-auto" style="max-height: 60vh;">
+                {% if beers %}
+                    <div class="list-group">
+                        {% for beer in beers %}
+                            <a href="{% url 'beer_details' beer.id %}" class="list-group-item list-group-item-action">{{ beer.name }}</a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-center">No beers are available.</p>
+                {% endif %}
+            </div>
         </div>
-    {% else %}
-        <p class="text-center">No beers are available.</p>
-    {% endif %}
+    </div>
+
     <div class="text-center mt-4">
-        <a href="{% url 'add_beer' %}" class="btn btn-primary">Add a New Beer</a>
+        <a href="{% url 'create_beer' %}" class="btn btn-primary">Add a New Beer</a>
     </div>
 </div>
 {% endblock %}

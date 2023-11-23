@@ -19,21 +19,25 @@
     </div>
 
     <h3 class="text-center mt-4">Reviews</h3>
-    {% for review in reviews %}
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ review.user.username }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}</h6>
-                <p class="card-text">{{ review.comment }}</p>
-                {% if request.user == review.user or request.user.is_superuser %}
-                    <form method="post" action="{% url 'delete_review' review.id %}">
-                        {% csrf_token %}
-                        {% bootstrap_button button_type="submit" content="Delete Review" button_class="btn-danger" %}
-                    </form>
-                {% endif %}
+    {% if reviews %}
+        {% for review in reviews %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ review.user.username }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}</h6>
+                    <p class="card-text">{{ review.comment }}</p>
+                    {% if request.user == review.user or request.user.is_superuser %}
+                        <form method="post" action="{% url 'delete_review' review.id %}">
+                            {% csrf_token %}
+                            {% bootstrap_button button_type="submit" content="Delete Review" button_class="btn-danger" %}
+                        </form>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p class="text-center">No reviews are available.</p>
+    {% endif %}
     {% if request.user.is_authenticated %}
         <div class="mt-4">
             <h3>Add a Review</h3>
@@ -48,6 +52,7 @@
             <p><a href="{% url 'login' %}">Log in</a> to add a review.</p>
         </div>
     {% endif %}
+
     {% if request.user == beer.user or request.user.is_superuser %}
         <div class="mt-3">
             <form method="post" action="{% url 'delete_beer' beer.id %}">
@@ -56,6 +61,7 @@
             </form>
         </div>
     {% endif %}
+
     {% if request.user == beer.user or request.user.is_superuser %}
         <div class="mt-3 text-center">
             <a href="{% url 'update_beer' beer.id %}" class="btn btn-secondary">Edit Beer</a>

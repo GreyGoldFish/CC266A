@@ -12,7 +12,10 @@
                     <div class="list-group list-group-flush mb-4">
                         {% for beer_style in beer_styles %}
                             {% if beer_style.family == family_code %}
-                                <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">{{ beer_style.name }}</a>
+                                <a href="{% url 'beer_style_details' beer_style.id %}" class="list-group-item list-group-item-action">
+                                    {{ beer_style.name }}
+                                    <span class="badge bg-secondary float-end">{{ beer_style.beers.count }}</span>
+                                </a>
                             {% endif %}
                         {% endfor %}
                     </div>
