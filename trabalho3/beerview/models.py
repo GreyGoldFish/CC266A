@@ -102,7 +102,7 @@ class Address(models.Model):
         verbose_name_plural = "addresses"
 
     def __str__(self):
-        # Cria uma lista com os componentes do address que não estão vazios
+        # Cria uma lista com os componentes do endereço que não estão vazios
         full_address = filter(
             None,
             [self.line1, self.line2, self.city, self.region, self.postal_code, self.country.name]

@@ -7,10 +7,11 @@ from django.contrib.auth.models import User
 from beerview.models import BeerStyle, Brewery, Beer, Review, Address
 import django
 
+# Configuração do ambiente Django para usar as suas funcionalidades
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'trabalho3.settings')
 django.setup()
 
-fake = Faker()
+fake = Faker()  # Cria uma instância do Faker para gerar dados falsos
 
 def create_address():
     return Address.objects.create(
@@ -39,10 +40,12 @@ def get_random_image_path(image_dir, extensions=['.jpg', '.png']):
     return os.path.join(image_dir, random.choice(images))
 
 def create_beer(brewery, beer_style, user, default_image_path):
+    # Definição de valores mínimos e máximos para o teor alcoólico (ABV)
     min_abv = Decimal(beer_style.min_abv if beer_style.min_abv else 2.0)
     max_abv = Decimal(beer_style.max_abv if beer_style.max_abv else 10.0)
-    abv = Decimal(str(round(random.uniform(float(beer_style.min_abv or 2.0), float(beer_style.max_abv or 10.0)), 1)))
+    abv = Decimal(str(round(random.uniform(float(min_abv), float(max_abv)), 1)))
 
+    # Geração de um nome aleatório para a cerveja
     beer_name_parts = [fake.color_name(), fake.word(), "Ale", "Lager", "Stout", "Porter", "IPA"]
     beer_name = ' '.join([random.choice(beer_name_parts) for _ in range(3)]).title()
 
@@ -58,6 +61,7 @@ def create_beer(brewery, beer_style, user, default_image_path):
         description=beer_description,
         user=user
     )
+    # Adiciona uma imagem padrão à cerveja, se disponível
     if default_image_path:
         with open(default_image_path, 'rb') as image_file:
             beer.picture.save(os.path.basename(default_image_path), File(image_file), save=True)
@@ -86,4 +90,4 @@ def populate_all():
             for _ in range(3):
                 create_review(beer, faker_user)
 
-    print("Fake data generation complete.")
+    print("Geração de dados falsos concluída com sucesso.")

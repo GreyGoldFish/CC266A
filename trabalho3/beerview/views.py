@@ -6,15 +6,6 @@ from django.contrib import messages
 from .models import Beer, BeerStyle, Brewery, Review, Address
 from .forms import ReviewForm, BeerForm, BreweryForm, RegisterForm
 
-def index(request):
-    beers = Beer.objects.all()
-
-    context = {
-        "beers": beers,
-    }
-
-    return render(request, "beerview/index.html", context)
-
 def beer_styles(request):
     beer_styles = BeerStyle.objects.all()
 
@@ -47,12 +38,6 @@ def search_breweries(request):
         breweries = Brewery.objects.all()
     return render(request, 'beerview/breweries.html', {'breweries': breweries})
 
-def brewery_details(request, brewery_id):
-    brewery = get_object_or_404(Brewery, pk=brewery_id)
-    beers = brewery.beers.all()
-
-    return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers})
-
 @login_required
 def create_brewery(request):
     if request.method == "POST":
@@ -78,6 +63,12 @@ def create_brewery(request):
         form = BreweryForm()
     return render(request, 'beerview/brewery_form.html', {'form': form})
 
+def brewery_details(request, brewery_id):
+    brewery = get_object_or_404(Brewery, pk=brewery_id)
+    beers = brewery.beers.all()
+
+    return render(request, 'beerview/brewery_details.html', {'brewery': brewery, 'beers': beers})
+
 @login_required
 def update_brewery(request, brewery_id):
     brewery = get_object_or_404(Brewery, id=brewery_id)
@@ -102,32 +93,6 @@ def delete_brewery(request, brewery_id):
 
     return redirect('breweries')
 
-def beer_details(request, beer_id):
-    beer = get_object_or_404(Beer, pk=beer_id)
-    reviews = beer.reviews.all()
-
-    # As avaliações ficam na página de detalhes da cerveja
-    if request.method == "POST":
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.beer = beer
-            review.user = request.user
-            review.save()
-            return redirect('beer_details', beer_id=beer.id)
-    else:
-        form = ReviewForm()
-
-    return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews, 'form': form})
-
-def search_beers(request):
-    query = request.GET.get('q')
-    if query:
-        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
-    else:
-        beers = Beer.objects.all()
-    return render(request, 'beerview/index.html', {'beers': beers})
-
 @login_required
 def create_beer(request):
     if request.method == "POST":
@@ -140,6 +105,24 @@ def create_beer(request):
     else:
         form = BeerForm()
     return render(request, 'beerview/beer_form.html', {'form': form})
+
+# Exibe a página inicial com a lista de cervejas
+def index(request):
+    beers = Beer.objects.all()
+
+    context = {
+        "beers": beers,
+    }
+
+    return render(request, "beerview/index.html", context)
+
+def search_beers(request):
+    query = request.GET.get('q')
+    if query:
+        beers = Beer.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
+    else:
+        beers = Beer.objects.all()
+    return render(request, 'beerview/index.html', {'beers': beers})
 
 @login_required
 def update_beer(request, beer_id):
@@ -163,6 +146,24 @@ def delete_beer(request, beer_id):
 
     return redirect('index')
 
+def beer_details(request, beer_id):
+    beer = get_object_or_404(Beer, pk=beer_id)
+    reviews = beer.reviews.all()
+
+    # As avaliações ficam na página de detalhes da cerveja
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.beer = beer
+            review.user = request.user
+            review.save()
+            return redirect('beer_details', beer_id=beer.id)
+    else:
+        form = ReviewForm()
+
+    return render(request, 'beerview/beer_details.html', {'beer': beer, 'reviews': reviews, 'form': form})
+
 @login_required
 def update_review(request, beer_id):
     beer = get_object_or_404(Beer, id=beer_id)
@@ -174,8 +175,6 @@ def update_review(request, beer_id):
     else:
         form = BeerForm(instance=beer)
     return render(request, 'beerview/beer_form.html', {'form': form, 'beer': beer})
-
-
     
 
 @login_required
